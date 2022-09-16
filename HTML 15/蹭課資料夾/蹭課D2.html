@@ -1,0 +1,37 @@
+<video controls width="250">
+<!-- 標籤的書寫格式→　<標籤　屬性="值" 屬性="值" 屬性="值">　標籤內可有多個屬性，屬性不一定要有值，用來設定標籤的格式 -->
+    <source src="/media/cc0-videos/flower.webm" type="video/webm">
+    <source src="/media/cc0-videos/flower.mp4" type="video/mp4">
+     <!-- <來源標籤 來源="路徑" 型態="影片格式"> -->
+     <!-- video下可以放多個來源標籤，他會依序尋找第一個可以讀取的影片格式。(有順序性) -->
+</video>
+
+<!-- <video></video> = 成對標籤 -->
+<!-- <source> = 自閉標籤 -->
+
+**HTML5= HTML + CSS + JavaSrcript =以上三項的技術組合
+**HTML5還定義了處理非法文件的具體細節，使得所有瀏覽器和客戶端程式能夠一致地處理語法錯誤。
+  →係指偵查到有錯誤的結構會自動修正
+
+  <img src="圖檔位置" alt="替代文字">
+  <!-- 當圖檔找不到時，就會顯示alt替代文字 -->
+  圖檔位置→有分"相對路徑"及"絕對路徑"
+  "絕對路徑"採用根目錄的寫法=等於一定要開伺服器
+  一般推薦用"相對路徑"
+  <img src="webp/ bear-after.webp" width="200" alt="替代文字"> 
+  <!-- 這個路徑是相對路徑：以自己為本位，要怎麼走到存放資料夾 ，路徑會根據自己在的位置而改變-->
+  <img src="http://網址" width="200" alt="">
+  <!-- 這個路徑是絕對路徑，利用網址來帶入，路徑不會改變 -->
+  <img src="/day02/webp/檔案" alt="">
+  <!-- 這個也是絕對路徑，利用根目錄的方式，告訴別人放在伺服器的哪個位置 ，路徑不會改變-->
+
+  
+  <picture>
+    <source srcset="big.jpg" media="(min-width: 1200px)">
+    <source srcset="medium.jpg" media="(min-width: 768px)">
+    <img src="small.jpg" alt="">
+  </picture>
+  "picture"可以設定條件，當解析度大於等於某個值，使用什麼圖片
+  "picture"之下的條件設定有順序性(抓取第一個符合條件的)，所以"min-width"應該由大到小，才不會在漏掉
+  >=1200用big； >=768用medium；沒有符合上述兩個條件，就用第三張small
+  優點：不用下載3張圖檔，只會抓取符合需求的

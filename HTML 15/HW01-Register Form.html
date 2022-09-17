@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+<link rel="stylesheet" href="reset.css">
+<style>
+    .warp{
+        background-color: rgba(247, 247, 247, 0.719);
+        width: 500px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 0px 40px 20px 40px;
+        border: 1px solid #ccc;
+    }
+    form h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(39, 75, 233);
+        line-height: 50px;
+        border-bottom: 2px solid;
+        margin-bottom: 10px;
+    }
+    .inputBlock,.formActionBlock{
+        width: 300px;
+        margin: auto;
+        padding: 5px 0px;
+        
+    }
+    .inputBlock:not(.selectBox) label{
+        display: inline-block;
+        width: 100px;
+        padding-right: 10px;
+        font-size: 18px;
+        text-align: end;
+        vertical-align: middle;
+    }
+    .inputBlock input{
+        line-height: 20px;
+        
+    }
+    .selectBox h2{
+        display: inline-block;
+        width: 100px;
+        padding-right: 10px;
+        font-size: 18px;
+        text-align: end;
+    }
+    .formActionBlock{
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 0px 0px 0px;
+    }
+    .formActionBlock input{
+        width: 100px;
+        height: 30px;
+        margin: 0px 5px;
+    }
+</style>
+<body>
+    <div class="warp">
+        <form id="registerForm" action="">
+            <h1>註冊頁面</h1>
+            <div class="inputBlock">
+                <label for="account">用戶名稱:</label>
+                <input type="text" id="account" placeholder="請輸入帳號">
+            </div>
+            <div class="inputBlock">
+                <label for="password">密碼:</label>
+                <input type="password" id="password" placeholder="請設定密碼">
+            </div>
+            <div class="inputBlock">
+                <label for="userEmail">E-mail:</label>
+                <input type="email" id="userEmail" placeholder="請輸入您的E-mail">
+            </div>
+            <div class="inputBlock">
+                <label for="userName">姓名:</label>
+                <input type="text" id="userName" placeholder="請輸入您的姓名">
+            </div>
+            <div class="inputBlock">
+                <label for="userPhone">連絡電話:</label>
+                <input type="tel" id="userPhone" placeholder="請輸入您的聯絡電話">
+            </div>
+            <div class="inputBlock">
+                <label for="userBirthday">出生日期:</label>
+                <input type="date" id="userBirthday">
+            </div>
+            <div class="inputBlock selectBox">
+                <h2>性別:</h2>
+                <label>
+                    <input type="radio" name="gender">
+                    男性
+                </label>
+                <label>
+                    <input type="radio" name="gender">
+                    女性
+                </label>
+                <label>
+                    <input type="radio" name="gender">
+                    其他
+                </label>
+            </div>
+            <div class="formActionBlock">
+                <input type="reset" value="重新填寫">
+                <input type="submit" value="註冊申請">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

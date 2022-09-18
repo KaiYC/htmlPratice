@@ -9,105 +9,138 @@
 <link rel="stylesheet" href="reset.css">
 <style>
     .warp{
-        background-color: rgba(247, 247, 247, 0.719);
-        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        width: 900px;
         margin: auto;
         margin-top: 30px;
-        padding: 0px 40px 20px 40px;
-        border: 1px solid #ccc;
     }
-    form h1 {
-        text-align: center;
-        font-size: 30px;
+    form{
+        width: 300px;
+    }
+    form h1{
+        text-align: left;
+        font-size: 20px;
         font-weight: bold;
-        color: rgb(39, 75, 233);
-        line-height: 50px;
-        border-bottom: 2px solid;
         margin-bottom: 10px;
     }
-    .inputBlock,.formActionBlock{
-        width: 300px;
-        margin: auto;
+    .SNSLogin a{
+        position: relative;
+        display: block;
+        margin: 10px 0px;
         padding: 5px 0px;
-        
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        transition: .4s;
     }
-    .inputBlock:not(.selectBox) label{
-        display: inline-block;
-        width: 100px;
-        padding-right: 10px;
-        font-size: 18px;
-        text-align: end;
+    .SNSLogin a img{
+        position: absolute;
+        margin: 3px;
+        top: 0;
+        left: 0;
+    }
+    .SNSLogin a:hover{
+        background-color: rgba(243, 243, 243, 0.747);
+    }
+    .registerData{
+        position: relative;
+        border-top: 1px solid #ccc;
+        margin: 30px 0px 20px 0px;
+    }
+    .registerData div:first-child{
+        position: absolute;
+        color: #ccc;
+        background-color: #fff;
+        font-size: 12px;
+        top: -7px;
+        left: 144px;
+    }
+    input{
+        line-height: 20px;
+        margin: 5px 0px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 3px 1px 3px 5px;
+    }
+    input[type="text"],input[type="tel"]{
+        width: 135px;
+        margin-top: 25px;
+    }
+    input[type="text"]{
+        margin-right: 10px;
+    }
+    input[type="email"],input[type="password"]{
+        width: 292px;
+    }
+    input:not(input[type="submit"]):hover{
+        border: 1px solid rgb(40, 191, 211);
+    }
+    input[type="submit"]{
+        width: 300px;
+        color: #fff;
+        background-color: rgb(40, 191, 211);
+        border: 0px;
+        padding: 5px 0px;
+        transition: .4s;
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(33, 152, 168);
+    }
+    .registerData div:last-child{
+        margin-top: 10px;
+    }
+    input[type="checkbox"]{
         vertical-align: middle;
     }
-    .inputBlock input{
-        line-height: 20px;
-        
+    label[for="termsOfUse"]{
+        font-size: 13px;
     }
-    .selectBox h2{
-        display: inline-block;
-        width: 100px;
-        padding-right: 10px;
-        font-size: 18px;
-        text-align: end;
+    label[for="termsOfUse"] a{
+        text-decoration: none;
+        color: rgb(40, 191, 211);
     }
-    .formActionBlock{
-        display: flex;
-        justify-content: flex-end;
-        padding: 15px 0px 0px 0px;
+    form div:last-child{
+        font-size: 13px;
     }
-    .formActionBlock input{
-        width: 100px;
-        height: 30px;
-        margin: 0px 5px;
+    form div:last-child a{
+        text-decoration: none;
+        color: rgb(40, 191, 211);
     }
 </style>
 <body>
     <div class="warp">
+        <div><img src="https://fakeimg.pl/400x400/" alt="Pic"></div>
         <form id="registerForm" action="">
-            <h1>註冊頁面</h1>
-            <div class="inputBlock">
-                <label for="account">用戶名稱:</label>
-                <input type="text" id="account" placeholder="請輸入帳號">
+            <h1>註冊</h1>
+            <div class="SNSLogin">
+                <a href="">
+                    <img src="https://fakeimg.pl/20x20/" alt="">使用Facebook登入
+                </a>
+                <a href="">
+                    <img src="https://fakeimg.pl/20x20/" alt="">使用Google登入
+                </a>
+                <a href="">
+                    <img src="https://fakeimg.pl/20x20/" alt="">使用Apple登入
+                </a>
             </div>
-            <div class="inputBlock">
-                <label for="password">密碼:</label>
-                <input type="password" id="password" placeholder="請設定密碼">
+            <div class="registerData">
+                <div>或</div>
+                <input type="text" placeholder="暱稱">
+                <input type="tel" placeholder="行動電話(非必填)">
+                <input type="email" placeholder="電子郵件">
+                <input type="password" placeholder="密碼">
+                <input type="password" placeholder="確認密碼">
+                <input type="submit" value="註冊">
+                <div>
+                    <input type="checkbox" id="termsOfUse">
+                    <label for="termsOfUse">我已詳閱<a href="">使用條款</a>並同意本網站之<a href="">隱私權政策</a>。</label>
+                </div>
             </div>
-            <div class="inputBlock">
-                <label for="userEmail">E-mail:</label>
-                <input type="email" id="userEmail" placeholder="請輸入您的E-mail">
-            </div>
-            <div class="inputBlock">
-                <label for="userName">姓名:</label>
-                <input type="text" id="userName" placeholder="請輸入您的姓名">
-            </div>
-            <div class="inputBlock">
-                <label for="userPhone">連絡電話:</label>
-                <input type="tel" id="userPhone" placeholder="請輸入您的聯絡電話">
-            </div>
-            <div class="inputBlock">
-                <label for="userBirthday">出生日期:</label>
-                <input type="date" id="userBirthday">
-            </div>
-            <div class="inputBlock selectBox">
-                <h2>性別:</h2>
-                <label>
-                    <input type="radio" name="gender">
-                    男性
-                </label>
-                <label>
-                    <input type="radio" name="gender">
-                    女性
-                </label>
-                <label>
-                    <input type="radio" name="gender">
-                    其他
-                </label>
-            </div>
-            <div class="formActionBlock">
-                <input type="reset" value="重新填寫">
-                <input type="submit" value="註冊申請">
-            </div>
+            <div>已有帳戶了嗎? <a href="">登入</a></div>
         </form>
     </div>
 </body>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+</head>
+<style>
+    @import url(reset.css);
+    header{
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        top: 2px;
+        left: 20px;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    .navBlock{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid #ccc;
+        padding-left: 180px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .navBlock > li {
+        position: relative;
+    }
+    .navBlock > li > a{
+        color: #000;
+        padding: 10px;
+        line-height: 50px;
+        transition: 0.5sec;
+    }
+    .navBlock > li:hover >a{
+        color: rgb(97, 208, 236);
+    }
+    .navBlock > li:hover .menu{
+        display: flex;
+        justify-content: center;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 47px;
+        left: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px #ccc;
+        width: 900px;
+    }
+    .subMenu1,.subMenu2{
+        width: 250px;
+        flex-grow: 5;
+        padding: 30px 0px 30px 20px;
+    }
+    .subMenu2{
+        margin-right: 10px;
+    }
+    .subMenu3{
+        width: 200px;
+        background-color: rgb(243, 239, 239);
+        padding: 30px 20px 30px 20px;
+    }
+    .menu h3{
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ccc;
+    }
+    .subMenu2 > li:nth-child(2){
+        margin-top: 40px;
+    }
+    .subMenu-item li{
+        padding: 5px 0px;
+    }
+    .subMenu-item li:hover{
+        background-color: rgba(228, 227, 227, 0.397);
+    }
+    .subMenu-item > li{
+        margin-top: 10px;
+    }
+    .subMenu-item img{
+        float: left;
+        margin: 0px 5px;
+    }
+    .subMenu-item h4{
+        font-size: 18px;
+        color: #000;
+    }
+    .subMenu-item a p{
+        clear: both;
+        padding: 5px 0px 0px 30px;
+        font-size: 15px;
+        color: rgb(99, 99, 99);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .subMenu3 img{
+        margin-right: 5px;
+        vertical-align: bottom;
+    }
+    .subMenu3>li>div{
+        margin-bottom: 10px;
+    }
+    .sideMenu-item li a div:first-child{
+        font-size: 18px;
+        color: #000;
+        padding: 10px 0px 5px 0px;
+    }
+    .sideMenu-item li a div:last-child{
+        font-size: 15px;
+        color: rgb(99, 99, 99);
+    }
+    .sideMenu-item li:hover a div:first-child{
+        color: rgb(24, 187, 228);
+    }
+    .subMenu3>li:last-child{
+        margin-top: 30px;
+    }
+    .subMenu3 .sideMenu-item:last-child{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .subMenu3 .sideMenu-item:last-child a{
+        color: #000;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0px 15px 0px 0px;
+    }
+    .subMenu3 .sideMenu-item:last-child a:hover{
+        color:rgb(24, 187, 228);
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="">
+                <img src="https://fakeimg.pl/150x46/" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="navBlock">
+                <li>
+                    <a href="">主題課程</a>
+                    <ul class="menu">
+                        <div class="subMenu1">
+                            <li>
+                                <h3>科技</h3>
+                                <ul class="subMenu-item">
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>人工智慧</h4>
+                                            <p>資料科學入門與AI基礎、資料分析程式語言</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>軟體開發</h4>
+                                            <p>程式檢定、資料庫、iOS APP開發、Andioid</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>雲端技術</h4>
+                                            <p>網路工程技術、容器技術、AWS雲端技術</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>資訊安全</h4>
+                                            <p>資安管理、資安應用、資安趨勢、資安法律</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>數位商務</h4>
+                                            <p>行銷企劃、網站企劃、社群行銷、廣告行銷</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="logo">
+                                            <h4>數位內如</h4>
+                                            <p>AR/VR、2D電繪、3D電繪、遊戲美術</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="subMenu2">
+                            <li>
+                                <h3>職場</h3>
+                                <ul class="subMenu-item">
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="">
+                                            <h4>組織發展</h4>
+                                            <p>人才發展、經營管理、永續營運、產業趨勢</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="">
+                                            <h4>個人成長</h4>
+                                            <p>自我提升、溝通協作、職場應用</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>語文</h3>
+                                <ul class="subMenu-item">
+                                    <li>
+                                        <a href="">
+                                            <img src="https://fakeimg.pl/20x20/" alt="">
+                                            <h4>商用外語</h4>
+                                            <p>基礎英文、商用英文、語言證照、基礎日文</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="subMenu3">
+                            <li>
+                                <div><img src="https://fakeimg.pl/20x20/" alt="">課程類型</div>
+                                <ul class="sideMenu-item">
+                                    <li>
+                                        <a href="">
+                                            <div>影音課程</div>
+                                            <div>提供各類知識主題影片、隨點隨看讓學習更彈性</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div>實體及直播課程</div>
+                                            <div>專業師資結合產業應用實例教學，培養職場時戰力</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div><img src="https://fakeimg.pl/20x20/" alt="">熱門搜尋</div>
+                                <ul class="sideMenu-item">
+                                    <li><a href="">實體課</a></li>
+                                    <li><a href="">Azure認證</a></li>
+                                    <li><a href="">GA4</a></li>
+                                    <li><a href="">Python</a></li>
+                                    <li><a href="">資安駭客</a></li>
+                                    <li><a href="">java</a></li>
+                                    <li><a href="">excel</a></li>
+                                    <li><a href="">多益</a></li>
+                                    <li><a href="">C#</a></li>
+                                    <li><a href="">YOLO</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">專業學程</a>
+                </li>
+                <li>
+                    <a href="">就業養成</a>
+                </li>
+                <li>
+                    <a href="">企業方案</a>
+                </li>
+                <li>
+                    <a href="">人才媒合</a>
+            </li>
+            <li>
+                <a href="">最新消息</a>
+        </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

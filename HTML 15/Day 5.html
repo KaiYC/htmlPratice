@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5</title>
+</head>
+<style>
+    @layer aa,bb;
+
+    *{
+        font-size: 32;
+    }
+    /* layer外 > layer內 */
+    p{
+        color: red;
+    }
+
+    @layer bb {
+        /* 父層優先權 > 子層 */
+        p {
+            color: green;
+        }
+        @layer bb-1 {
+            p {
+                color: pink;
+            }
+        }
+    }
+    /* 子層寫法-2 */
+    @layer bb.bb-1{
+        p{
+            color: grey;
+        }
+    }
+
+    @layer aa {
+        p {
+            color: blue;
+        }
+    }
+
+    .box-01 {
+        width: 300px;
+        background-color: azure;
+        margin: auto; /*分配剩餘空間，所以可以左右居中，但因為Block高度是由內容撐開，所以等於沒有高的空間*/
+    }
+
+    .fbox {
+        display: flex;
+        background-color: beige;
+    }
+    .fbox p {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        margin: auto;
+    }
+    .group {
+        width: 1000px;
+        background-color: #ccc;
+        margin: auto;
+        display: flex;
+    }
+    .card {
+        width: 230px;
+        margin: 10px;
+        background-color: #fa0;
+    }
+    .card img {
+        width: 100%; /*與父層相同*/
+    }
+</style>
+<body>
+    <h1>Layer</h1>
+    <p class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut placeat incidunt accusantium enim? Officiis similique distinctio atque nobis molestias odio provident ab illum, dolorem porro tenetur, perferendis cum sunt cupiditate!</p>
+    <h1>inline or block</h1>
+    <div class="box-01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo commodi vero facere ducimus nam? Nulla, suscipit architecto, accusantium omnis ex minus commodi ut quasi dignissimos error at laudantium, inventore numquam?</div>
+    <h1>Flex</h1>
+    <div class="fbox">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nostrum corporis at libero aspernatur nihil illo sed ipsa aut laudantium.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis est quidem facilis autem vero nulla velit reiciendis quae fuga ipsam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo culpa cupiditate minus? Architecto nisi rerum distinctio et. Iste, dolorem?</p>
+    </div>
+    <h1>Card Model</h1>
+    <div class="group">
+        <div class="card">
+            <img src="https://fakeimg.pl/300x200/200" alt="">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis fugit quis exercitationem eligendi cum perspiciatis quaerat hic quam corrupti rem.</p>
+        </div>
+        <div class="card">
+            <img src="https://fakeimg.pl/300x200/200" alt="">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis fugit quis exercitationem eligendi cum perspiciatis quaerat hic quam corrupti rem.</p>
+        </div>
+        <div class="card">
+            <img src="https://fakeimg.pl/300x200/200" alt="">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis fugit quis exercitationem eligendi cum perspiciatis quaerat hic quam corrupti rem.</p>
+        </div>
+        <div class="card">
+            <img src="https://fakeimg.pl/300x200/200" alt="">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis fugit quis exercitationem eligendi cum perspiciatis quaerat hic quam corrupti rem.</p>
+        </div>
+    </div>
+</body>
+</html>

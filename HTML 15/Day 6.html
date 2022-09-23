@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="reset.css">
+<style>
+    .box{
+        width: 200px;
+        padding:20px;
+        border: 20px solid #fa0;
+        margin: 20px;
+        font-size: 20px;
+        background-color: #ccc;
+        /* box-sizing: border-box; */
+    }
+    span{
+        background-color: red;
+        font-size: 16px;
+    }
+    .warp2{
+        font-size: 0;
+    }
+    .sm{
+        margin: 0px -2px;
+    }
+</style>
+<body>
+    <h1>Box Model</h1>
+    <div class="box">一二三四五六七八九十原文正在然後部分求助演出，日誌寬頻，打開明天都市曝光男孩網址辛苦再說一口氣玻璃轉載睡覺，保險最多承。</div>
+    <p>中文是等寬字，所以設定20px 10個字剛好就是200px</p>
+
+    <h1>inline 空白字元問題 寫法換行會自動添加一個空白</h1>
+    <div class="warp">
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+    <h2> 解決方式1 橫列</h2>
+    <div class="warp"><span>span</span><span>span</span><span>span</span></div>
+    <h2> 解決方式2 註解</h2>
+    <div class="warp"><!---
+     --><span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+    <h2> 解決方式3 角括號下移</h2>
+    <div class="warp">
+        <span>span</span
+        ><span>span</span>
+        <span>span</span>
+    </div>
+    <h2> 解決方式4 設定margin負值</h2>
+    <div class="warp">
+        <span class="sm">span</span>
+        <span class="sm">span</span>
+        <span class="sm">span</span>
+    </div>
+    <h2> 解決方式5 父層font-size:0 =>把空白字元變成0</h2>
+    <div class="warp2">
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+    <h1>inline物件有vertical align的問題</h1>
+    <p>因為預設對其baseline 只要vertical align不對齊baseline就可以解決</p>
+</body>
+</html>

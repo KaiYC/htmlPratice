@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Block Card</title>
+</head>
+<link rel="stylesheet" href="reset.css">
+<style>
+    .warp{
+        width: 1200px;
+        margin-top: 30px;
+        margin: auto;
+    }
+    .warp h2{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .slideFunctionBlock{
+        text-align: center;
+        font-size: 0px;
+        margin: 20px 0px;
+    }
+    .slideFunctionBlock button{
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 130px;
+        margin: 0px 5px;
+        line-height: 30px;
+        font-size: 16px;
+        color: rgb(29, 29, 29);
+    }
+    .slideFunctionBlock button:first-child {
+        background-color: rgb(4, 184, 216);
+        border: 0px;
+        font-weight: bolder;
+        color: #fff;
+    }
+    .card-group{
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        font-size: 0px;
+    }
+    .card{
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        width: 268px;
+        height: 390px;
+        border: 1px solid #ccc;
+        margin: 0px 15px;
+        box-shadow: 1px 1px 20px rgb(211, 211, 211);
+    }
+    .card img{
+        width: 100%;
+        
+    }
+    .specialLable{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(29, 167, 71);
+        text-align: center;
+        color: #fff;
+        padding: 7px 13px;
+        font-size: 12px;
+    }
+    .noInfo{
+        opacity: 0;
+    }
+    .cardBody{
+        padding: 10px;
+    }
+    .breadcrumb{
+        width: 248px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .breadcrumb a{
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bolder;
+        color: rgb(143, 143, 143);
+    }
+    .breadcrumb a+a::before{
+        content: "/";
+        padding-right: 5px;
+    }
+    .breadcrumb a:first-child,.breadcrumb a:first-child+a{
+        color: rgb(10, 171, 199);
+    }
+    .cardBody h3{
+        /* 折行後多餘文字移除 */
+        line-height: 25px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .cardBody .courseInfo{
+        font-size: 15px;
+        margin: 10px 0px;
+        color: rgb(136, 136, 136);
+    }
+    .cardBody .discount{
+        border: 1px solid #fa0;
+        width: fit-content;
+        font-size: 15px;
+        color: rgb(136, 136, 136);
+        line-height: 25px;
+        padding-right: 5px;
+        border-radius: 3px;
+    }
+    .cardBody .discount span{
+        display: inline-block;
+        background-color: #fa0;
+        color: #fff;
+        padding: 0px 5px 0px 5px;
+        margin-right: 5px;
+    }
+    .cardBody .noInfo{
+        display: inline-block;
+        height: 25px;
+    }
+    .card-group footer{
+        display: flex;
+        padding: 10px 10px 20px 10px;
+        justify-content: space-between;
+    }
+    .card-group footer .price{
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(10, 171, 199);
+    }
+    .card-group footer .price span{
+        font-size: 13px;
+        margin-left: 3px;
+    }
+    .card-group footer .viewer{
+        color: rgb(136, 136, 136);
+        line-height: 23px;
+        font-size: 12px;
+    }
+</style>
+<body>
+    <div class="warp">
+        <h2>最新課程</h2>
+        <div class="slideFunctionBlock">
+            <button>科技</button>
+            <button>職場</button>
+            <button>語文</button>
+        </div>
+        <div class="card-group">
+            <div class="card">
+                <img src="https://fakeimg.pl/300x200/200" alt="">
+                <div class="specialLable noInfo"></div>
+                <div class="cardBody">
+                    <div class="breadcrumb">
+                        <a href="#">主題課程</a>
+                        <a href="#">影音課程</a>
+                    </div>
+                    <h3>深度學習影像辨識 | YOLO物件偵測全解析</h3>
+                    <p class="courseInfo">約8.1小時</p>
+                    <p class="discount"><span>早鳥優惠</span>還剩 4天 1時</p>    
+                </div>
+                <footer>
+                    <p class="price">NT$ 2,384</p>
+                    <p class="viewer">4,048 人瀏覽</p>
+                </footer>
+            </div>
+            <div class="card">
+                <img src="https://fakeimg.pl/300x200/200" alt="">
+                <div class="specialLable noInfo"></div>
+                <div class="cardBody">
+                    <div class="breadcrumb">
+                        <a href="#">主題課程</a>
+                        <a href="#">實體及直播課程</a>
+                        <a href="#">緯育TibaMe</a>
+                    </div>
+                    <h3>零基礎Python入門與資料科學</h3>
+                    <p class="courseInfo">第二十二期。2022/11/01開課</p>
+                    <p class="discount noInfo"></p>    
+                </div>
+                <footer>
+                    <p class="price">NT$ 7,920<span>起</span></p>
+                    <p class="viewer">156,553 人瀏覽</p>
+                </footer>
+            </div>
+            <div class="card">
+                <img src="https://fakeimg.pl/300x200/200" alt="">
+                <div class="specialLable">確定開課</div>
+                <div class="cardBody">
+                    <div class="breadcrumb">
+                        <a href="#">主題課程</a>
+                        <a href="#">實體及直播課程</a>
+                        <a href="#">真人直播</a>
+                    </div>
+                    <h3>【真人直播】 成為白帽駭客1 | 道德駭客實務入門及CEO dfjie</h3>
+                    <p class="courseInfo">第八期。2022/11/12開課</p>
+                    <p class="discount noInfo"></p>    
+                </div>
+                <footer>
+                    <p class="price">NT$ 10,710<span>起</span></p>
+                    <p class="viewer">17,815 人瀏覽</p>
+                </footer>
+            </div>
+            <div class="card">
+                <img src="https://fakeimg.pl/300x200/200" alt="">
+                <div class="specialLable">確定開課</div>
+                <div class="cardBody">
+                    <div class="breadcrumb">
+                        <a href="#">主題課程</a>
+                        <a href="#">實體及直播課程</a>
+                        <a href="#">真人直播</a>
+                    </div>
+                    <!-- 如何設定折特定行數後隱藏多餘文字? -->
+                    <h3>【真人直播】 成為白帽駭客1 | 道德駭客實務入門及CEO djfeifh</h3>
+                    <p class="courseInfo">第七期。2022/10/01開課</p>
+                    <p class="discount noInfo"></p>
+                </div>
+                <footer>
+                    <p class="price">NT$ 10,710<span>起</span></p>
+                    <p class="viewer">17,815 人瀏覽</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+            
+</body>
+</html>

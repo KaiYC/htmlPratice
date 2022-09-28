@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .group{
+        width: 500px;
+        height: 500px;
+        background-color: #ccc;
+        display: flex;
+        /* column-gap: 25px; */
+        /* row-gap: 5px; */
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+        font-size: 32px;
+        display: flex;
+    }
+    .item > div{
+        margin: auto;
+    }
+    .item1{
+        background-color: #fa0;
+        /* flex-basis: 100px; */
+        /* flex-shrink: 0; */
+        order: 1;
+    }
+    .item2{
+        background-color: #f0a;
+        /* grow寫法 */
+        /* width: 0%; */
+        /* flex-grow: 1; */
+
+        /* shrink寫法 */
+        /* width: 100%; */
+        /* flex-shrink: 1; */
+
+    }
+    .item3{
+        background-color: #0fa;
+        /* flex-shrink: 0; */
+    }
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .ritem{
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+        background-color: #aaa;
+        margin: 5px;
+    }
+    .ritem16{
+        background-color: #fa0;
+        /* position: relative; */
+        left: 30px;
+        
+    }
+    .ritem17{
+        background-color: #aaf;
+        /* position: relative; */
+        /* z-index: 1; */
+    }
+    .ritem38{
+        background-color: #faa;
+        position: fixed;
+        /* 置中 */
+        right: 0px;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+    }
+    .block{
+        width: 700px;
+        height: 500px;
+        display: flex;
+        margin: 50px;
+        border: 1px solid #ccc;
+        align-items: center;
+        justify-content: center;
+    }
+    .pic1, .pic2{
+        padding: 10px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+        position: relative;
+    }
+    .pic1{
+        bottom: 20px;
+        left: 5px;
+        background-color: #fff;
+    }
+    .pic1 img{
+        width: 100%;
+    }
+    .pic2{
+        top: 20px;
+        right: 5px;
+        background-color: #aaf;
+        z-index: -1;
+        padding-left: 20px;
+    }
+</style>
+<body>
+    <h1>Flex</h1>
+    <!-- 左右固定中間彈性版面 -->
+    <!-- 兩端固定，中間用width:100，flex-shrink:1 -->
+    <!-- 兩端固定，中間用width:0，flex-grow:1 -->
+    <div class="group">
+        <div class="item item1"><div>1</div></div>
+        <div class="item item2"><div>2</div></div>
+        <div class="item item3"><div>3</div></div>
+    </div>
+    <h1>Position</h1>
+    <!-- 未設定position時，margin值若為負值，原始碼後方的層會高於前面 -->
+    <!-- 設定position時，margin值若為負值，有定位的值高於沒定位，若都有則後面的層高於前面 -->
+    <div class="wrap">
+        <div class="ritem ritem1">1</div>
+        <div class="ritem ritem2">2</div>
+        <div class="ritem ritem3">3</div>
+        <div class="ritem ritem4">4</div>
+        <div class="ritem ritem5">5</div>
+        <div class="ritem ritem6">6</div>
+        <div class="ritem ritem7">7</div>
+        <div class="ritem ritem8">8</div>
+        <div class="ritem ritem9">9</div>
+        <div class="ritem ritem10">10</div>
+        <div class="ritem ritem11">11</div>
+        <div class="ritem ritem12">12</div>
+        <div class="ritem ritem13">13</div>
+        <div class="ritem ritem14">14</div>
+        <div class="ritem ritem15">15</div>
+        <div class="ritem ritem16">16</div>
+        <div class="ritem ritem17">17</div>
+        <div class="ritem ritem18">18</div>
+        <div class="ritem ritem19">19</div>
+        <div class="ritem ritem20">20</div>
+        <div class="ritem ritem21">21</div>
+        <div class="ritem ritem22">22</div>
+        <div class="ritem ritem23">23</div>
+        <div class="ritem ritem24">24</div>
+        <div class="ritem ritem25">25</div>
+        <div class="ritem ritem26">26</div>
+        <div class="ritem ritem27">27</div>
+        <div class="ritem ritem28">28</div>
+        <div class="ritem ritem29">29</div>
+        <div class="ritem ritem30">30</div>
+        <div class="ritem ritem31">31</div>
+        <div class="ritem ritem32">32</div>
+        <div class="ritem ritem33">33</div>
+        <div class="ritem ritem34">34</div>
+        <div class="ritem ritem35">35</div>
+        <div class="ritem ritem36">36</div>
+        <div class="ritem ritem37">37</div>
+        <div class="ritem ritem38">38</div>
+        <div class="ritem ritem39">39</div>
+        <div class="ritem ritem40">40</div>
+    </div>
+    <h1>Reletive Pratice</h1>
+    <div class="block">
+        <div class="pic1"><img src="https://fakeimg.pl/300x300/200"></div>
+        <div class="pic2">手機鈴聲支付碩士轉變下來果然民國雖然先進教育，錯誤科技聊天，對著以下私人廠家小子在此商務充滿舉報會員，買賣輕易業務進行今天針對想法風格相機，品種創意反映好評電話對於近期還會電視劇通過是的合適，上網教學不可能，幫我機構上升短信，能否來電測試重要錯誤外國，準。</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Homework</title>
+</head>
+<link rel="stylesheet" href="reset.css">
+<style>
+    header{
+        position: fixed;
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+    }
+    .logo{
+        padding: 26px 35px;
+        border-right: 1px solid rgba(238, 238, 238, 0.5);
+    }
+    .logo img{
+        vertical-align: middle;
+    }
+    nav{
+        flex-grow: 1;
+    }
+    .navMenu{
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 30px;
+    }
+    header a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .navBlock a{
+        display: block;
+        height: 42px;
+        padding: 26px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    .navBlock span{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .newGraduateEntryBlock{
+        background-color: #c90129;
+    }
+    .midCareerEntryBlock{
+        background-color: #7d011a;
+    }
+    .newGraduateEntryBlock a, .midCareerEntryBlock a{
+        display: inline-block;
+        height: 42px;
+        padding: 26px 30px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 40px;
+    }
+    .newGraduateEntryBlock img, .midCareerEntryBlock img{
+        width: 60px;
+        padding: 0px 0px 3px 10px;
+    }
+    .firstPage{
+        background-image: url(img/kv_05_pc.jpg.jfif);
+        background-size: cover;
+        height: 100vh;
+    }
+    .firstPage h1{
+        display: block;
+        padding-top: 495px;
+        padding-left: 90px;
+        font-size: 25px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 30px;
+    }
+    .firstPage h1 span:first-child{
+        color: #c90129;
+        margin-right: 5px;
+    }
+    .firstPage h1 span:last-child{
+        display: block;
+        margin-top: 35px;
+        margin-left: -41px;
+        font-size: 65px;
+        line-height: 70px;
+        
+    }
+    .casesPage{
+        height: 250vh;
+        background-color: #271350;
+        display: flex;
+    }
+    .rollingLeft{
+        width: 35%;
+        border-right: 1px solid rgba(238, 238, 238, 0.5);
+    }
+    .rollingOther{
+        width: 30%;
+        border-right: 1px solid rgba(238, 238, 238, 0.5);
+    }
+    .rollingLeft h2{
+        color:#c90129
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="img/LOGO.png" alt="companyLogo">
+            </a>
+        </div>
+        <nav>
+            <ul class="navMenu">
+                <li class="navBlock">
+                    <a href="#ourCases">施工事例<br><span>OUR CASES</span></a></li>
+                <li class="navBlock">
+                    <a href="#">部門紹介<br><span>OUR JOB</span></a></li>
+                <li class="navBlock">
+                    <a href="#">先輩の声<br><span>OUR STAFF</span></a></li>
+                <li class="navBlock">
+                    <a href="#">よくある質問<br><span>FAQ</span></a></li>
+            </ul>
+        </nav>
+        <div class="newGraduateEntryBlock">
+            <a href="#">新卒 ENTRY
+                <img src="img/arrow.png" alt="arrow">
+            </a>
+        </div>
+        <div class="midCareerEntryBlock">
+            <a href="#">中途 ENTRY
+                <img src="img/arrow.png" alt="arrow">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="firstPage">
+            <h1><span>PROTECT</span> THE LIFE AND PROPERTY<br><span>「かけがえのない命と財産を守る」<br>&ensp;それが私たちの使命です。</span></h1>
+        </section>
+        <section class="casesPage">
+            <div class="rollingLeft">
+                <div class="decoline"></div>
+                <h2 id="ourCases">施工事例</h2>
+            </div>
+            <div class="rollingOther"></div>
+            <div class="rollingOther"></div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

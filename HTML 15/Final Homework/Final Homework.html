@@ -14,6 +14,7 @@
         width: 100%;
         background-color: transparent;
         border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+        z-index: 3;
     }
     .logo{
         padding: 26px 35px;
@@ -91,20 +92,170 @@
         
     }
     .casesPage{
-        height: 250vh;
-        background-color: #271350;
+        height: 400vh;
+        background-color: #201952;
+        position: relative;
+    }
+    .rollingBase{
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 120px 0px 0px 90px;
+    }
+    .rollingFst, .rollingSec{
+        width: 29.6%;
+        height: 100%;
+        border-right: 1px solid rgba(238, 238, 238, 0.5);
+        border-left: 1px solid rgba(238, 238, 238, 0.5);
+        position: absolute;
+    }
+    .rollingFst{
+        top: 0;
+        left: 36%;
+    }
+    .rollingSec{
+        top: 0;
+        left: 65.6%;
+    }
+    .rollingBase img{
+        position: absolute;
+        bottom: 0;
+        right: 6%;
+        /* z-index: 2; */
+    } 
+    .casesTitle{
+        position: sticky;
+        z-index: 1;
+        top: 130px;
+        height: 100vh;
+    }
+    .titleTop{
         display: flex;
     }
-    .rollingLeft{
-        width: 35%;
-        border-right: 1px solid rgba(238, 238, 238, 0.5);
+    .titleTop h2{
+        font-size: 20px;
+        font-weight: 700;
+        color:#c90129;
+        flex-shrink: 0;
     }
-    .rollingOther{
-        width: 30%;
-        border-right: 1px solid rgba(238, 238, 238, 0.5);
+    .decoline{
+        width: 12%;
+        height: 11px;
+        margin-left: 2.2%;
+        border-bottom: 1px solid rgb(212, 210, 210);
     }
-    .rollingLeft h2{
-        color:#c90129
+    .casesTitle .decoTitle{
+        display: block;
+        width: fit-content;
+        color: #fff;
+        font-size: 170px;
+        font-weight: 900;
+        line-height: 130px;
+    }
+    .casesTitle .decoTitle .dTitleUp{
+        position: relative;
+        top: 130px;
+        transform: scaleX(1.2);
+        transform: scaleY(1.4);
+    }
+    .casesTitle .decoTitle .dTitleMid{
+        background-color: #201952;
+        position: relative;
+        transform: scaleX(1.1);
+        transform: scaleY(1.2);
+    }
+    .casesTitle .decoTitle .dTitleBut{
+        background-color: #201952;
+        position: relative;
+        bottom: 130px;
+    }
+    .casesTitle p{
+        display: block;
+        width: calc(36% - 90px);
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+    }
+    .casesTitle p:last-child{
+        font-size: 40px;
+        line-height: 120px;
+    }
+    .casesPage figure{
+        position: relative;
+        z-index: 2;
+    }
+    .casesPage figure img{
+        width: 100%;        
+    }
+    .casesPage figure figcaption{
+        color: #c90129;
+        font-size: 25px;
+        padding: 5px;
+        font-weight: 700;
+    }
+    .casesPage figure figcaption span{
+        float: right;
+        color: #fff;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .rollingFst figure:first-child{
+        top: 28.7%;
+    }
+    .rollingFst figure:last-child{
+        top: 55.3%;
+    }
+    .rollingSec figure:first-child{
+        top: 10.6%;
+    }
+    .rollingSec figure:last-child{
+        top: 37.2%;
+    }
+    .jobPage{
+        display: flex;
+        height: 65vh;
+        padding: 120px 0px 120px 90px;
+    }
+    .jobPage .jobTitle{
+        width: 25%;
+    }
+    .jobPage .depBlock{
+        width: 70%;
+        display: flex;
+    }
+    .depBlock div{
+        width: 25%;
+        border: 1px solid rgb(212, 210, 210);
+        box-sizing: border-box;
+        background-color: #201952;
+        color: #fff;
+        padding: 25px 0px 0px 25px;
+    }
+    .depBlock div:nth-child(1){
+        background-image: url(img/asset\ 9.jpeg);
+        background-size: cover;
+    }
+    .depBlock div:nth-child(2){
+        background-image: url(img/asset\ 10.jpeg);
+        background-size: cover;
+    }
+    .depBlock div:nth-child(3){
+        background-image: url(img/asset\ 11.jpeg);
+        background-size: cover;
+    }
+    .depBlock div:nth-child(4){
+        background-image: url(img/asset\ 12.jpeg);
+        background-size: cover;
+    }
+    .depBlock div p{
+        writing-mode: vertical-lr;
+        line-height: 30px;
+    }
+    .depBlock div p span{
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 80px;
     }
 </style>
 <body>
@@ -119,7 +270,7 @@
                 <li class="navBlock">
                     <a href="#ourCases">施工事例<br><span>OUR CASES</span></a></li>
                 <li class="navBlock">
-                    <a href="#">部門紹介<br><span>OUR JOB</span></a></li>
+                    <a href="#ourJob">部門紹介<br><span>OUR JOB</span></a></li>
                 <li class="navBlock">
                     <a href="#">先輩の声<br><span>OUR STAFF</span></a></li>
                 <li class="navBlock">
@@ -142,12 +293,69 @@
             <h1><span>PROTECT</span> THE LIFE AND PROPERTY<br><span>「かけがえのない命と財産を守る」<br>&ensp;それが私たちの使命です。</span></h1>
         </section>
         <section class="casesPage">
-            <div class="rollingLeft">
-                <div class="decoline"></div>
-                <h2 id="ourCases">施工事例</h2>
+            <div class="rollingBase">
+                <div class="casesTitle">
+                    <div class="titleTop">
+                        <h2 id="ourCases">施工事例</h2>
+                        <div class="decoline"></div>
+                    </div>
+                    <div class="decoTitle">
+                        <div class="dTitleUp">OUR CASES</div>
+                        <div class="dTitleMid">OUR CASES</div>
+                        <div class="dTitleBut">OUR CASES</div>
+                    </div>
+                    <p>高度な専門技術や知識が求められる場においても、<br>多様なニーズにお応えし、万全の防災設備を<br>ご提供します。</p>
+                    <p>火の安心を、つくろう。</p>
+                </div>
+                <img src="img/fire-extinguisher.png" alt="fire-extinguisher">
             </div>
-            <div class="rollingOther"></div>
-            <div class="rollingOther"></div>
+            <div class="rollingFst">
+                <figure>
+                    <figcaption>/02<span>東京スカイツリータウン®</span></figcaption>
+                    <img src="img/asset 6.jpeg" alt="東京スカイツリータウン®">
+                </figure>
+                <figure>
+                    <figcaption>/04<span>国立新美術館</span></figcaption>
+                    <img src="img/asset 8.jpeg" alt="国立新美術館">
+                </figure>
+            </div>
+            <div class="rollingSec">
+                <figure>
+                    <figcaption>/01<span>水天宮</span></figcaption>
+                    <img src="img/asset 5.jpeg" alt="水天宮">
+                </figure>
+                <figure>
+                    <figcaption>/03<span>MIYASHITA PARK</span></figcaption>
+                    <img src="img/asset 7.jpeg" alt="MIYASHITA PARK">
+                </figure>
+            </div>
+        </section>
+        <section class="jobPage">
+            <div class="jobTitle">
+                <div class="titleTop">
+                    <h2 id="ourJob">部門紹介</h2>
+                    <div class="decoline"></div>
+                </div>
+                <div class="decoTitle">
+                    <div class="dTitleUp">OUR JOBS</div>
+                    <div class="dTitleMid">OUR JOBS</div>
+                    <div class="dTitleBut">OUR JOBS</div>
+                </div>
+            </div>
+            <div class="depBlock">
+                <div>
+                    <p> / ENGINEERING<br><span>エンジニアリング部門</span></p>
+                </div>
+                <div>
+                    <p> / PRODUCTION<br><span>生産部門</span></p>
+                </div>
+                <div>
+                    <p> / TECHNICAL<br><span>技術部門</span></p>
+                </div>
+                <div>
+                    <p> / SALES<br><span>営業部門</span></p>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>

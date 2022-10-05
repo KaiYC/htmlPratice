@@ -7,321 +7,7 @@
     <title>Final Homework</title>
 </head>
 <link rel="stylesheet" href="reset.css">
-<style>
-    header{
-        position: fixed;
-        display: flex;
-        width: 100%;
-        background-color: transparent;
-        border-bottom: 1px solid rgba(238, 238, 238, 0.5);
-        z-index: 3;
-    }
-    .logo{
-        padding: 26px 35px;
-        border-right: 1px solid rgba(238, 238, 238, 0.5);
-    }
-    .logo img{
-        vertical-align: middle;
-    }
-    nav{
-        flex-grow: 1;
-    }
-    .navMenu{
-        display: flex;
-        justify-content: space-around;
-        padding: 0px 30px;
-    }
-    header a{
-        text-decoration: none;
-        color: #fff;
-    }
-    .navBlock a{
-        display: block;
-        height: 42px;
-        padding: 26px;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 20px;
-    }
-    .navBlock span{
-        font-size: 20px;
-        font-weight: 900;
-    }
-    .newGraduateEntryBlock{
-        background-color: #c90129;
-    }
-    .midCareerEntryBlock{
-        background-color: #7d011a;
-    }
-    .newGraduateEntryBlock a, .midCareerEntryBlock a{
-        display: inline-block;
-        height: 42px;
-        padding: 26px 30px;
-        font-size: 20px;
-        font-weight: 900;
-        line-height: 40px;
-    }
-    .newGraduateEntryBlock img, .midCareerEntryBlock img{
-        width: 60px;
-        padding: 0px 0px 3px 10px;
-    }
-
-
-    .firstPage{
-        background-image: url(img/kv_05_pc.jpg.jfif);
-        background-size: cover;
-        height: 100vh;
-    }
-    .firstPage h1{
-        display: block;
-        padding-top: 495px;
-        padding-left: 90px;
-        font-size: 25px;
-        font-weight: 700;
-        color: #fff;
-        line-height: 30px;
-    }
-    .firstPage h1 span:first-child{
-        color: #c90129;
-        margin-right: 5px;
-    }
-    .firstPage h1 span:last-child{
-        display: block;
-        margin-top: 35px;
-        margin-left: -41px;
-        font-size: 65px;
-        line-height: 70px;
-        
-    }
-
-
-    .casesPage{
-        height: 400vh;
-        background-color: #201952;
-        position: relative;
-    }
-    .rollingBase{
-        position: relative;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 120px 0px 0px 90px;
-    }
-    .rollingFst, .rollingSec{
-        width: 29.6%;
-        height: 100%;
-        border-right: 1px solid rgba(238, 238, 238, 0.5);
-        border-left: 1px solid rgba(238, 238, 238, 0.5);
-        position: absolute;
-    }
-    .rollingFst{
-        top: 0;
-        left: 36%;
-    }
-    .rollingSec{
-        top: 0;
-        left: 65.6%;
-    }
-    .rollingBase img{
-        position: absolute;
-        bottom: 0;
-        right: 6%;
-        z-index: 2;
-    } 
-    .casesTitle{
-        position: sticky;
-        z-index: 1;
-        top: 130px;
-        height: 100vh;
-    }
-    .titleTop{
-        display: flex;
-    }
-    .titleTop h2{
-        font-size: 20px;
-        font-weight: 700;
-        color:#c90129;
-        flex-shrink: 0;
-    }
-    .decoline{
-        width: 12%;
-        height: 10px;
-        margin-left: 2.2%;
-        border-bottom: 1px solid rgb(212, 210, 210);
-    }
-    .casesTitle .decoTitle-ourCases{
-        width: fit-content;
-        color: #fff;
-        font-size: 170px;
-        font-weight: 900;
-        line-height: 130px;
-    }
-    .casesTitle .decoTitle-ourCases .dTitleUp{
-        position: relative;
-        top: 130px;
-        transform: scaleX(1.2);
-        transform: scaleY(1.4);
-    }
-    .casesTitle .decoTitle-ourCases .dTitleMid{
-        background-color: #201952;
-        position: relative;
-        transform: scaleX(1.1);
-        transform: scaleY(1.2);
-    }
-    .casesTitle .decoTitle-ourCases .dTitleBut{
-        background-color: #201952;
-        position: relative;
-        bottom: 130px;
-    }
-    .casesTitle p{
-        display: block;
-        width: calc(36% - 90px);
-        color: #fff;
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 500;
-    }
-    .casesTitle p:last-child{
-        font-size: 40px;
-        line-height: 120px;
-    }
-    .casesPage figure{
-        position: relative;
-        z-index: 2;
-    }
-    .casesPage figure img{
-        width: 100%;        
-    }
-    .casesPage figure figcaption{
-        color: #c90129;
-        font-size: 25px;
-        padding: 5px;
-        font-weight: 700;
-    }
-    .casesPage figure figcaption span{
-        float: right;
-        color: #fff;
-        font-size: 15px;
-        line-height: 25px;
-    }
-    .rollingFst figure:first-child{
-        top: 28.7%;
-    }
-    .rollingFst figure:last-child{
-        top: 55.3%;
-    }
-    .rollingSec figure:first-child{
-        top: 10.6%;
-    }
-    .rollingSec figure:last-child{
-        top: 37.2%;
-    }
-
-
-    .jobPage{
-        display: flex;
-        height: 600px;
-        padding: 120px 0px 120px 98px;
-    }
-    .jobPage .jobTitle{
-        width: 25%;
-        position: relative;
-    }
-    .jobTitle .titleTop{
-        margin-top: 120px;
-    }
-    .jobPage .decoline{
-        width: 30%;
-        margin-left: 5%;
-    }
-    .decoTitle-our, .decoTitle-jobs{
-        font-size: 100px;
-        font-weight: 900;
-        line-height: 80px;
-        color: #201952;
-    }
-    .jobPage .dTitleUp{
-        position: relative;
-        transform: scaleX(1.2);
-        transform: scaleY(1.3);
-    }
-    .jobPage .dTitleMid{
-        position: relative;
-        background-color: #fff;
-        transform: scaleX(1.1);
-        transform: scaleY(1.2);
-    }
-    .jobPage .dTitleBut{
-        position: relative;
-        background-color: #fff;
-    }
-    .decoTitle-our .dTitleUp{
-        top: 73px;
-    }
-    .decoTitle-our .dTitleBut{
-        bottom: 75px;
-    }
-    .decoTitle-jobs{
-        position: absolute;
-        top: 240px;
-        left: 5px;
-    }
-    .decoTitle-jobs .dTitleUp{
-        top: 90px;
-    }
-    .decoTitle-jobs .dTitleBut{
-        bottom: 83px;
-    }
-    .jobPage .depBlock{
-        width: 70%;
-        display: flex;
-        flex-grow: 1;
-    }
-    .depBlock div{
-        width: 25%;
-        border: 1px solid rgb(212, 210, 210);
-        box-sizing: border-box;
-        padding: 25px 0px 0px 25px;
-    }
-    .depBlock a{
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        color: #fff;
-        width: 100%;
-        height: 100%;
-    }
-    .depBlock div:nth-child(1){
-        background-image: url(img/asset\ 9.jpeg);
-        background-size: cover;
-    }
-    .depBlock div:nth-child(2){
-        background-image: url(img/asset\ 10.jpeg);
-        background-size: cover;
-    }
-    .depBlock div:nth-child(3){
-        background-image: url(img/asset\ 11.jpeg);
-        background-size: cover;
-    }
-    .depBlock div:nth-child(4){
-        background-image: url(img/asset\ 12.jpeg);
-        background-size: cover;
-    }
-    .depBlock div p{
-        flex-grow: 1;
-        writing-mode: vertical-lr;
-        line-height: 30px;
-    }
-    .depBlock div p span{
-        margin-top: -10px;
-        font-size: 50px;
-        font-weight: 800;
-        line-height: 80px;
-    }
-    .depBlock div img{
-        width: 50px;
-        padding: 30px 0px 30px 15px;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 <body>
     <header>
         <div class="logo">
@@ -400,12 +86,12 @@
                     <h2 id="ourJob">部門紹介</h2>
                     <div class="decoline"></div>
                 </div>
-                <div class="decoTitle-our">
+                <div class="decoTitle-up">
                     <div class="dTitleUp">OUR</div>
                     <div class="dTitleMid">OUR</div>
                     <div class="dTitleBut">OUR</div>
                 </div>
-                <div class="decoTitle-jobs">
+                <div class="decoTitle-dw">
                     <div class="dTitleUp">JOBS</div>
                     <div class="dTitleMid">JOBS</div>
                     <div class="dTitleBut">JOBS</div>
@@ -439,7 +125,59 @@
             </div>
         </section>
         <section class="staffPage">
-            
+            <div class="staffTitle">
+                <div class="titleTop">
+                    <h2 id="ourStaff">先輩の声</h2>
+                    <div class="decoline"></div>
+                </div>
+                <div class="decoTitle-up">
+                    <div class="dTitleUp">OUR</div>
+                    <div class="dTitleMid">OUR</div>
+                    <div class="dTitleBut">OUR</div>
+                </div>
+                <div class="decoTitle-dw">
+                    <div class="dTitleUp">STAFF</div>
+                    <div class="dTitleMid">STAFF</div>
+                    <div class="dTitleBut">STAFF</div>
+                </div>
+                <div class="staffInfoBlock">
+                    <div class="stuffArea">エンジニア</div>
+                    <div class="staffInfo">
+                        <p>M.S</p>
+                        <p>入社年：2017年</p>
+                        <p>所属：エンジニアリング1部</p>
+                        <p>学部：理工学部</p>
+                    </div>
+                </div>
+            </div>
+            <div class="staffPhoto">
+                <div class="countingArea">
+                    <p>1</p>
+                    <div class="decoline"></div>
+                    <p>7</p>
+                </div>
+                <div class="photoArea">
+                    <div class="majorPhoto">
+                        <img src="img/asset 13.jpeg" alt="stuffPhoto01">
+                    </div>
+                    <div class="otherPhoto">
+                        <div class="photoWall">
+                            <img src="img/asset 14.jpeg" alt="stuffPhoto02">
+                            <img src="img/asset 15.jpeg" alt="stuffPhoto03">
+                            <img src="img/asset 16.jpeg" alt="stuffPhoto04">
+                        </div>
+                        <div class="photoSwitchBtn">
+                            <div>
+                                <img src="img/arrow.png" alt="arrow">
+                            </div>
+                            <div>
+                                <img src="img/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>

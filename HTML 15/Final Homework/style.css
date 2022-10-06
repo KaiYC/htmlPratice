@@ -1,4 +1,3 @@
-/* decoline可以用偽元素來用 */
 header{
     position: fixed;
     display: flex;
@@ -8,10 +7,14 @@ header{
     z-index: 3;
 }
 .logo{
-    padding: 26px 35px;
+    padding: 1.4vw 1.89vw;
     border-right: 1px solid rgba(238, 238, 238, 0.5);
 }
+.logo div{
+    width: 15.09vw;
+}
 .logo img{
+    width: 100%;
     vertical-align: middle;
 }
 nav{
@@ -20,7 +23,7 @@ nav{
 .navMenu{
     display: flex;
     justify-content: space-around;
-    padding: 0px 30px;
+    padding: 0 1.62vw;
 }
 header a{
     text-decoration: none;
@@ -28,65 +31,62 @@ header a{
 }
 .navBlock a{
     display: block;
-    height: 42px;
-    padding: 26px;
-    font-size: 13px;
+    height: 2.26vw;
+    padding: 1.4vw;
+    font-size: 0.65vw;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 1.8em;
 }
 .navBlock span{
-    font-size: 20px;
+    font-size: 0.97vw;
     font-weight: 900;
 }
-.newGraduateEntryBlock{
+div.EntryBlock.new{
     background-color: #c90129;
 }
-.midCareerEntryBlock{
+div.EntryBlock.mid{
     background-color: #7d011a;
 }
-.newGraduateEntryBlock a, .midCareerEntryBlock a{
-    display: inline-block;
-    height: 42px;
-    padding: 26px 30px;
-    font-size: 20px;
+.EntryBlock a{
+    display: block;
+    height: 2.26vw;
+    padding: 1.4vw 1.62vw;
+    font-size: 0.97vw;
+    line-height: 2.26vw;
     font-weight: 900;
-    line-height: 40px;
 }
-.newGraduateEntryBlock img, .midCareerEntryBlock img{
-    width: 60px;
+.EntryBlock img{
+    width: 3.23vw;
     padding: 0px 0px 3px 10px;
 }
+/* ------------------------------------------------------ */
 
-
-.firstPage{
+.facePage{
     background-image: url(img/kv_05_pc.jpg.jfif);
     background-size: cover;
 }
-.firstPage h1{
+.facePage h1{
     display: block;
-    padding-top: 53.22vh;
-    padding-left: 4.73%;
-    padding-bottom: 24.79vh;
-    font-size: 25px;
+    padding: 27.64vw 0 11.53vw 3.5vw;
+    font-size: 1.05vw;
     font-weight: 700;
     color: #fff;
-    line-height: 30px;
 }
-.firstPage h1 span:first-child{
+.facePage h1 span:first-child{
     color: #c90129;
-    margin-right: 5px;
+    margin-right: 0.3em;
 }
-.firstPage h1 span:last-child{
+.facePage h1 span:last-child{
     display: block;
-    margin-top: 35px;
-    margin-left: -41px;
-    font-size: 65px;
-    line-height: 70px;
+    font-size: 3.47vw;
+    margin-top: 0.5em;
+    margin-left: -0.5em;
+    line-height: 1.3em;
 }
-
+/* ----------------------------------------------------- */
 
 .casesPage{
-    height: 400vh;
+    height: 155.56vw;
     background-color: #201952;
     position: relative;
 }
@@ -94,7 +94,7 @@ header a{
     position: relative;
     height: 100%;
     box-sizing: border-box;
-    padding: 120px 0px 0px 90px;
+    padding: 6.47vw 0 0 4.85vw;
 }
 .rollingFst, .rollingSec{
     width: 29.6%;
@@ -112,6 +112,7 @@ header a{
     left: 65.6%;
 }
 .rollingBase img{
+    width: 38.04vw;
     position: absolute;
     bottom: 0;
     right: 6%;
@@ -120,35 +121,33 @@ header a{
 .casesTitle{
     position: sticky;
     z-index: 1;
-    top: 130px;
+    top: 7vw;
     height: 100vh;
 }
-.titleTop{
+#ourCases{
     display: flex;
-}
-.titleTop h2{
-    font-size: 20px;
+    align-items: center;
+    font-size: 1.08vw;
     font-weight: 700;
     color:#c90129;
-    flex-shrink: 0;
 }
-/* 要改用偽元素 */
-.decoline{
-    width: 12%;
-    height: 10px;
-    margin-left: 2.2%;
-    border-bottom: 1px solid rgb(212, 210, 210);
+#ourCases::after{
+    content: '';
+    width: 11.58vw;
+    height: 1px;
+    margin-left: 2em;
+    background-color: rgb(212, 210, 210);
 }
 .casesTitle .decoTitle-ourCases{
     width: fit-content;
     color: #fff;
-    font-size: 170px;
+    font-size: 9.16vw;
     font-weight: 900;
-    line-height: 130px;
+    line-height: 7vw;
 }
 .casesTitle .decoTitle-ourCases .dTitleUp{
     position: relative;
-    top: 130px;
+    top: 7vw;
     transform: scaleX(1.2);
     transform: scaleY(1.4);
 }
@@ -161,19 +160,19 @@ header a{
 .casesTitle .decoTitle-ourCases .dTitleBut{
     background-color: #201952;
     position: relative;
-    bottom: 130px;
+    bottom: 7vw;
 }
 .casesTitle p{
     display: block;
-    width: calc(36% - 90px);
+    width: calc(36% - 4.85vw);
     color: #fff;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.08vw;
+    line-height: 1.62vw;
     font-weight: 500;
 }
 .casesTitle p:last-child{
-    font-size: 40px;
-    line-height: 120px;
+    font-size: 2.16vw;
+    line-height: 6.47vw;
 }
 .casesPage figure{
     position: relative;
@@ -184,15 +183,15 @@ header a{
 }
 .casesPage figure figcaption{
     color: #c90129;
-    font-size: 25px;
+    font-size: 1.35vw;
     padding: 5px;
     font-weight: 700;
 }
 .casesPage figure figcaption span{
     float: right;
     color: #fff;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.81vw;
+    line-height: 1.35vw;
 }
 .rollingFst figure:first-child{
     top: 28.7%;
@@ -206,28 +205,37 @@ header a{
 .rollingSec figure:last-child{
     top: 37.2%;
 }
-
+/* ----------------------------------------------------- */
 
 .jobPage{
     display: flex;
-    padding: 137px 0px 137px 98px;
+    padding: 7.38vw 0vw 7.38vw 5.28vw;
 }
 .jobPage .jobTitle{
     width: 25%;
     position: relative;
 }
 .jobTitle .titleTop{
-    margin-top: 120px;
+    margin-top: 6.47vw;
 }
-/* 用偽元素 */
-.jobPage .decoline, .staffPage .decoline{
-    width: 30%;
-    margin-left: 5%;
+#ourJob{
+    display: flex;
+    align-items: center;
+    font-size: 1.08vw;
+    font-weight: 700;
+    color:#c90129;
+}
+#ourJob::after{
+    content: '';
+    width: 7.81vw;
+    height: 1px;
+    margin-left: 2em;
+    background-color: rgb(212, 210, 210);
 }
 .decoTitle-up, .decoTitle-dw{
-    font-size: 100px;
+    font-size: 5.39vw;
     font-weight: 900;
-    line-height: 80px;
+    line-height: 4.31vw;
     color: #201952;
 }
 .dTitleUp{
@@ -246,21 +254,21 @@ header a{
     background-color: #fff;
 }
 .decoTitle-up .dTitleUp{
-    top: 73px;
+    top: 3.93vw;
 }
 .decoTitle-up .dTitleBut{
-    bottom: 75px;
+    bottom: 4.04vw;
 }
 .decoTitle-dw{
     position: absolute;
-    top: 240px;
+    top: 12.93vw;
     left: 5px;
 }
 .decoTitle-dw .dTitleUp{
-    top: 90px;
+    top: 4.85vw;
 }
 .decoTitle-dw .dTitleBut{
-    bottom: 83px;
+    bottom: 4.47vw;
 }
 .jobPage .depBlock{
     width: 70%;
@@ -298,21 +306,22 @@ header a{
 }
 .depBlock div p{
     flex-grow: 1;
+    font-size: 0.65vw;
     writing-mode: vertical-lr;
-    line-height: 30px;
-    padding: 25px 0px 0px 25px;
+    line-height: 1.62vw;
+    padding: 1.35vw 0vw 0vw 1.35vw;
 }
 .depBlock div p span{
-    margin-top: -10px;
-    font-size: 50px;
+    margin-top: -0.54vw;
+    font-size: 2.69vw;
     font-weight: 800;
-    line-height: 80px;
+    line-height: 4.31vw;
 }
 .depBlock div img{
-    width: 50px;
-    padding: 20px 0px 20px 30px;
+    width: 2.69vw;
+    padding: 1.08vw 0vw 1.08vw 1.62vw;
 }
-
+/* ----------------------------------------------------- */
 
 .staffPage{
     display: flex;
@@ -322,8 +331,22 @@ header a{
 .staffPage .staffTitle{
     position: relative;
     width: 47.29%;
-    padding: 120px 0px 20px 98px; 
+    padding: 6.47vw 0vw 1.08vw 5.28vw; 
     background-color:#201952;
+}
+#ourStaff{
+    display: flex;
+    align-items: center;
+    font-size: 1.08vw;
+    font-weight: 700;
+    color:#c90129;
+}
+#ourStaff::after{
+    content: '';
+    width: 7.81vw;
+    height: 1px;
+    margin-left: 2em;
+    background-color: rgb(212, 210, 210);
 }
 .staffPhoto{
     width: 52.71%;
@@ -338,43 +361,48 @@ header a{
     background-color: #201952;
 }
 .staffTitle .decoTitle-dw{
-    top: 240px;
-    left: 98px;
+    top: 12.93vw;
+    left: 5.28vw;
 }
 .staffPage .staffInfoBlock{
-    margin: 190px 0px 35px 100px;
+    margin: 10.24vw 0vw 1.89vw 5.39vw;
 }
 .staffInfoBlock .stuffArea{
+    font-size: 0.81vw;
     border: 1px solid aqua;
     width: fit-content;
-    padding: 10px 10px;
+    padding: 0.54vw 0.6vw;
     color: aqua;
-    margin-bottom: 40px;
+    margin-bottom: 2.16vw;
 }
 .staffInfoBlock .staffInfo{
     color: #fff;
 }
 .staffInfo p:nth-child(1){
     display: block;
-    font-size: 25px;
+    font-size: 1.35vw;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 2.16vw;
 }
-.staffInfo p:nth-child(n+1){
-    line-height: 23px;
+.staffInfo p:nth-child(n+2){
+    font-size: 0.65vw;
+    line-height: 1.24vw;
 }
 .staffPhoto .countingArea{
     display: flex;
     justify-content: flex-end;
-    margin: 40px 80px 40px 0px;
+    margin: 2.16vw 4.32vw 2.16vw 0vw;
 }
 .countingArea{
-    font-size: 20px;
+    font-size: 1.08vw;
 }
 /* 用偽元素 */
-.countingArea .decoline{
-    width: 10%;
-    margin: 0 2.5%;
+.countingArea p:first-child::after{
+    content: '';
+    width: 7.81vw;
+    height: 1px;
+    margin-left: 2em;
+    background-color: rgb(212, 210, 210);
 }
 .photoArea{
     width: 121.5%;
@@ -397,23 +425,23 @@ header a{
 }
 .otherPhoto .photoWall{
     white-space: nowrap;
-
 }
 .otherPhoto img{
-    margin-left: 40px;
+    margin-left: 2.16vw;
+    width: 15.09vw;
 }
 .photoSwitchBtn div{
     display: inline-block;
     background-color: #c90129;
-    width: 100px;
-    height: 100px;
-    margin: 20px 30px 0px 40px;
+    width: 5.39vw;
+    height: 5.39vw;
+    margin: 1.08vw 1.62vw 0vw 2.16vw;
     border-radius: 50%;
     overflow: hidden;
 }
 .photoSwitchBtn img{
-    width: 50px;
-    margin: 48px 0px 0px 25px;
+    width: 2.69vw;
+    margin: 2.59vw 0vw 0vw 1.35vw;
 }
 .photoSwitchBtn div:first-child img{
     transform: scaleX(-1);

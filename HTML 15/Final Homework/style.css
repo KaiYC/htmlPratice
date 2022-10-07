@@ -471,10 +471,14 @@ div.EntryBlock.mid{
     top: 7vw;
 }
 .FAQTitle .decoTitle-up .dTitleUp{
-    top: 4.65vw;
+    top: 4.25vw;
+    transform: scaleY(1.55);
+}
+.FAQTitle .decoTitle-up .dTitleMid{
+    transform: scaleY(1.25);
 }
 .FAQTitle .decoTitle-up .dTitleBut{
-    bottom: 4.35vw;
+    bottom: 4.3vw;
 }
 .FAQTitle .FAQPic{
     width: 15.08vw;

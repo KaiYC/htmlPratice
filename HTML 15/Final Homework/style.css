@@ -304,14 +304,14 @@ div.EntryBlock.mid{
     background-image: url(img/asset\ 12.jpeg);
     background-size: cover;
 }
-.depBlock div p{
+.depBlock div h3{
     flex-grow: 1;
     font-size: 0.65vw;
     writing-mode: vertical-lr;
     line-height: 1.62vw;
     padding: 1.35vw 0vw 0vw 1.35vw;
 }
-.depBlock div p span{
+.depBlock div h3 span{
     margin-top: -0.54vw;
     font-size: 2.69vw;
     font-weight: 800;
@@ -380,28 +380,35 @@ div.EntryBlock.mid{
 }
 .staffInfo p:nth-child(1){
     display: block;
-    font-size: 1.35vw;
+    font-size: 1.4vw;
     font-weight: 700;
     margin-bottom: 2.16vw;
 }
 .staffInfo p:nth-child(n+2){
-    font-size: 0.65vw;
+    font-size: 0.81vw;
     line-height: 1.24vw;
 }
 .staffPhoto .countingArea{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 2.16vw 4.32vw 2.16vw 0vw;
 }
 .countingArea{
     font-size: 1.08vw;
 }
-/* 用偽元素 */
-.countingArea p:first-child::after{
+/* 用偽元素 margin有推動 但是物件沒出來 */
+/* .countingArea p:first-child::after{
     content: '';
-    width: 7.81vw;
+    width: 11.58vw;
     height: 1px;
     margin-left: 2em;
+    background-color: rgb(212, 210, 210);
+} */
+.countingArea .decoline{
+    width: 5.39vw;
+    height: 1px;
+    margin: 0vw 2vw;
     background-color: rgb(212, 210, 210);
 }
 .photoArea{
@@ -409,7 +416,6 @@ div.EntryBlock.mid{
     position: absolute;
     display: flex;
     left: -21.68%;
-    
 }
 .photoArea .majorPhoto{
     width: 35.84%;
@@ -426,9 +432,14 @@ div.EntryBlock.mid{
 .otherPhoto .photoWall{
     white-space: nowrap;
 }
-.otherPhoto img{
+.photoWall a{
+    display: inline-block;
     margin-left: 2.16vw;
     width: 15.09vw;
+}
+.otherPhoto img{
+    width: 100%;
+    vertical-align: middle;
 }
 .photoSwitchBtn div{
     display: inline-block;
@@ -438,6 +449,7 @@ div.EntryBlock.mid{
     margin: 1.08vw 1.62vw 0vw 2.16vw;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 .photoSwitchBtn img{
     width: 2.69vw;
@@ -445,4 +457,111 @@ div.EntryBlock.mid{
 }
 .photoSwitchBtn div:first-child img{
     transform: scaleX(-1);
+}
+/* ----------------------------------------------------- */
+.FAQPage{
+    display: flex;
+}
+.FAQPage .rollingBase{
+    width: 38.62vw;
+    height: auto;
+}
+.rollingBase .FAQTitle{
+    position: sticky;
+    top: 7vw;
+}
+.FAQTitle .FAQPic{
+    width: 15.08vw;
+    margin-left: auto;
+    padding: 2.63vw 2.63vw 14.71vw 0vw;
+}
+.FAQPic img{
+    position: static;
+    width: 100%;
+}
+#FAQ{
+    display: flex;
+    align-items: center;
+    font-size: 1.08vw;
+    font-weight: 700;
+    color:#c90129;
+}
+#FAQ::after{
+    content: '';
+    width: 7.81vw;
+    height: 1px;
+    margin-left: 2em;
+    background-color: rgb(212, 210, 210);
+}
+.FAQPage .FAQCardBlock{
+    width: 55.86vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.08vw;
+    padding: 12.61vw 0.84vw 6.31vw 0.84vw;
+}
+.FAQCardBlock .FAQCard{
+    box-sizing: border-box;
+    width: 26.01vw;
+    padding: 4.2vw 2.1vw 2.1vw 2.1vw;
+    border: 1px solid rgb(212, 210, 210);    
+}
+.FAQCard h3{
+    font-size: 1.31vw;
+    font-weight: 700;
+    color: #c90129;
+}
+.FAQCard h3 span{
+    font-size: 0.95vw;
+    color: #201952;
+}
+.FAQCard p{
+    font-size: 0.79vw;
+    line-height: 1.5em;
+    padding-top: 0.5em;
+}
+/* ----------------------------------------------------- */
+
+footer .marqueeBlock div{
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.marqueeBlock div img{
+    width: 28.69vw;
+    vertical-align: middle;
+    padding-right: 2.1vw;
+}
+.marqueeUp img{
+    transform: translateX(-40%);
+}
+.marqueeDw img{
+     transform: translateX(-220%);
+}
+.marqueeBlock .marqueeTxt{
+    position: relative;
+    z-index: 2;
+    font-size: 9.16vw;
+    font-weight: 900;
+    height: 1em;
+    color: #201952;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* overflow的文字就直接切斷，無法像圖片一樣錯位 =>是因為整段被移走*/
+/* 將文字段落像圖片一樣接起來再位移 */
+.marqueeUp .marqueeTxt{
+    margin-top: -0.3em;
+}
+.marqueeUp .marqueeTxt p{
+    display: inline-block;
+    transform: translateX(-30%);
+}
+.marqueeDw .marqueeTxt{
+    margin-bottom: -0.3em;
+}
+.marqueeDw .marqueeTxt p{
+    display: inline-block;
+    transform: translateX(-50%);
 }

@@ -397,7 +397,7 @@ div.EntryBlock.mid{
 .countingArea{
     font-size: 1.08vw;
 }
-/* 用偽元素 margin有推動 但是物件沒出來 */
+/* 用偽元素 margin有推動 content打文字有出現 但是留空卻沒出來 */
 /* .countingArea p:first-child::after{
     content: '';
     width: 11.58vw;
@@ -470,6 +470,12 @@ div.EntryBlock.mid{
     position: sticky;
     top: 7vw;
 }
+.FAQTitle .decoTitle-up .dTitleUp{
+    top: 4.65vw;
+}
+.FAQTitle .decoTitle-up .dTitleBut{
+    bottom: 4.35vw;
+}
 .FAQTitle .FAQPic{
     width: 15.08vw;
     margin-left: auto;
@@ -522,7 +528,7 @@ div.EntryBlock.mid{
 }
 /* ----------------------------------------------------- */
 
-footer .marqueeBlock div{
+.marqueeBlock div{
     position: relative;
     font-size: 0;
     white-space: nowrap;
@@ -564,4 +570,68 @@ footer .marqueeBlock div{
 .marqueeDw .marqueeTxt p{
     display: inline-block;
     transform: translateX(-50%);
+}
+
+.moreInfoAndLinkBlock{
+    background-color: #201952;
+}
+.moreInfoAndLinkBlock .enterpriceInfoBlock{
+    border: 1px solid rgba(238, 238, 238, 0.5);
+    display: flex;
+}
+/* 左側圖片嘗試讓背景可以配合右邊資料欄延伸，利用絕對定位使背景圖片可以配合父層做調整 */
+.enterpriceInfoBlock .footerLogo{
+    width: 26.94vw;
+    position: relative;
+}
+.footerLogo img[src='img/footerLogo.png']{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.footerLogo img[src='img/LOGO-nw.png']{
+    width: 4.8vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.enterpriceInfoBlock .enterpriceInfo{
+    width: 40vw;
+    margin: 6.36vw 0vw 6.36vw 5.39vw;
+    font-size: 0.81vw;
+    font-weight: 700;
+    color: rgb(212, 210, 210);
+}
+.enterpriceInfo>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.4vw;
+}
+.enterpriceInfo a{
+    text-decoration: none;
+    color: #fff;
+    width: 18.05vw;
+    line-height: 2.5em;
+}
+.moreInfoAndLinkBlock .otherLink{
+    background-color: #201952;
+}
+.otherLink a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.81vw;
+    font-weight: 500;
+    line-height: 5em;
+    padding-left: 1.29vw;
+    padding-right: 1.29vw;
+}
+.otherLink p{
+    float: right;
+    color: #fff;
+    font-size: 0.81vw;
+    font-weight: 500;
+    line-height: 5em;
 }

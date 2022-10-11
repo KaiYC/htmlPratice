@@ -1,0 +1,124 @@
+.mainNav{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100vh;
+}
+#menuControl{
+    position: absolute;
+    opacity: 0;
+}
+.logo{
+    box-sizing: border-box;
+    width: 84.75%;
+    padding: 3.15% 0 3.15% 6px;
+    border: 1px solid #ccc;
+}
+.logo img{
+    width: 57.41%;
+    vertical-align: middle;
+}
+.menuButton{
+    position: relative;
+    box-sizing: border-box;
+    width: 15.25%;
+    border: 1px solid #ccc;
+}
+.menuButton span{
+    opacity: 0;
+}
+.menuButton::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 28px;
+    height: 2px;
+    background-color: #000;
+}
+.menuButton::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 23px;
+    height: 2px;
+    background-color: #000;
+    box-shadow: 0px 16px 0px #000;
+}
+.navMenu{
+    position: fixed;
+    inset: 0;
+    display: none;
+    background-color: #fff;
+}
+.menuButtonClose{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+}
+.menuButtonClose span{
+    opacity: 0;
+}
+.menuButtonClose::after{
+    content: 'X';
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.menuLogo{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+.menuLogo img{
+    width: 50px;
+}
+.navMenu a{
+    display: block;
+    padding: 8% 6.4%;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: red;
+    font-size: 14px;
+}
+.navMenu a span{
+    display: block;
+    color: #000;
+    font-size: 28px;
+    padding-top: 14px;
+}
+.menuRecruitBlock{
+    font-size: 0;
+}
+.menuRecruitBlock a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    color: #fff;
+    font-size: 10px;
+}
+.newGraduate{
+    background-color: #c90129;
+}
+.midCareer{
+    background-color: #7d011a;
+}
+.navRecruitBlock{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+#menuControl:checked ~ .navMenu{
+    display: flex;
+    flex-direction: column;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Final Homework-revise</title>
 </head>
 <link rel="stylesheet" href="reset.css">
@@ -11,47 +11,108 @@
 <body>
     <nav class="mainNav">
         <input type="checkbox" id="menuControl">
-        <div class="logo">
-            <img src="img/LOGO.png" alt="logo">
+        <div class="navLogoBlock">
+            <div class="navLogo">
+                <img src="img/asset 37.svg" alt="YAMATO PROTECT CORPORATION">
+            </div>
         </div>
         <label for="menuControl" class="menuButton">
             <span>Menu</span>
         </label>
         <ul class="navMenu">
-            <label for="menuControl" class="menuButtonClose">
-                <span>Menu Close</span>
-            </label>
-            <li class="menuLogo">
-                <img src="img/LOGO-nw.png" alt="logo without title">
-            </li>
-            <li class="linkBlockOurCases"><a href="#ourCases">施工事例<span>OUR CASES</span></a></li>
-            <li class="linkBlockOurJob"><a href="#ourJob">部門紹介<span>OUR JOB</span></a></li>
-            <li class="linkBlockOurStaff"><a href="#ourStaff">先輩の声<span>OUR STAFF</span></a></li>
-            <li class="linkBlockFaq"><a href="#faq">よくある質問<span>FAQ</span></a></li>
-            <li class="menuRecruitBlock">
+                <li class="navMenuToggle">
+                    <label for="menuControl" class="menuButtonClose">
+                        <span>Menu Close</span>
+                    </label>
+                </li>
+                <li class="menuLogo">
+                    <img src="img/asset 37.svg" alt="YAMATO PROTECT CORPORATION">
+                </li>
+                <li class="linkBlockOurCases"><a href="#ourCases">施工事例<span>OUR CASES</span></a></li>
+                <li class="linkBlockOurJob"><a href="#ourJob">部門紹介<span>OUR JOB</span></a></li>
+                <li class="linkBlockOurStaff"><a href="#ourStaff">先輩の声<span>OUR STAFF</span></a></li>
+                <li class="linkBlockFaq"><a href="#faq">よくある質問<span>FAQ</span></a></li>
+                <li class="RecruitBlock menuRecruitBlock">
+                    <a href="" class="newGraduate">新卒 ENTRY
+                        <img src="img/arrow.png" alt="arrow">
+                    </a>
+                    <a href="" class="midCareer">中途 ENTRY
+                        <img src="img/arrow.png" alt="arrow">
+                    </a>
+                </li>
+        </ul>
+        <div class="RecruitBlock navRecruitBlock">
                 <a href="" class="newGraduate">新卒 ENTRY
-                    <!-- <img src="img/arrow.png" alt="arrow"> -->
+                    <img src="img/arrow.png" alt="arrow">
                 </a>
                 <a href="" class="midCareer">中途 ENTRY
-                    <!-- <img src="img/arrow.png" alt="arrow"> -->
+                    <img src="img/arrow.png" alt="arrow">
                 </a>
-            </li>
-        </ul>
-        <div class="menuRecruitBlock">
-            <a href="" class="newGraduate">新卒 ENTRY
-                <!-- <img src="img/arrow.png" alt="arrow"> -->
-            </a>
-            <a href="" class="midCareer">中途 ENTRY
-                <!-- <img src="img/arrow.png" alt="arrow"> -->
-            </a>
         </div>
     </nav>
-    <header class="mainHeader"></header>
+    <header class="mainHeader">
+        <h1 class="mainTitle">
+            <span lang="en"><span>PROTECT</span> THE LIFE AND PROPERTY</span>
+            <span lang="ja">「かけがえのない命と財産を守る」<span>それが私たちの使命です。</span>
+            </span>
+        </h1>
+        <!-- 使用edge瀏覽器 106版 無法有效果 -->
+        <picture class="headerBackground">
+            <source media="(min-width:1200px)" srcset="img/asset 2.jpeg" >
+            <source media="(min-width:768px)" srcset="img/asset 0.jpeg" >
+            <img src="img/asset 4-.jpeg" alt="background Picture">
+        </picture>
+    </header>
     <main>
-        <section class="section sectionOurCases"></section>
-        <section class="section sectionOurJobs"></section>
-        <section class="section sectionOurStaff"></section>
-        <section class="section sectionFaq"></section>
+        <section class="section sectionOurCases">
+            <div class="titleBlock">
+                <h2 id="ourCases">施工事例</h2>
+                <div class="decoTitle">OUR CASES</div>
+                <p class="casesDescription">高度な専門技術や知識が求められる場においても、<span>多様なニーズにお応えし、万全の防災設備を</span>ご提供します。</p>
+                <p class="casesSlogan">火の安心を、つくろう。</p>
+            </div>
+            <ul class="casesDemoBlock">
+                    <li class="casesSample">
+                        <figure>
+                            <figcaption>/01<span>水天宮</span></figcaption>
+                            <img src="img/asset 5.jpeg" alt="水天宮">
+                        </figure>
+                    </li>
+                    <li class="casesSample">
+                        <figure>
+                            <figcaption>/02<span>東京スカイツリータウン®</span></figcaption>
+                            <img src="img/asset 6.jpeg" alt="東京スカイツリータウン®">
+                        </figure>
+                    </li>
+                    <li class="casesSample">
+                        <figure>
+                            <figcaption>/03<span>MIYASHITA PARK</span></figcaption>
+                            <img src="img/asset 7.jpeg" alt="MIYASHITA PARK">
+                        </figure>
+                    </li>
+                    <li class="casesSample">
+                        <figure>
+                            <figcaption>/04<span>国立新美術館</span></figcaption>
+                            <img src="img/asset 8.jpeg" alt="国立新美術館">
+                        </figure>
+                    </li>
+            </ul>
+            <div class="casesInsertPicture">
+                <img src="img/fire-extinguisher.png" alt="fire-extinguisher">
+            </div>
+        </section>
+        <section class="section sectionOurJobs">
+            <div class="titleBlock">
+                <h2 id="ourJob">部門紹介</h2>
+                <div class="decoTitle">OUR <span>JOBS</span></div>
+            </div>
+        </section>
+        <section class="section sectionOurStaff">
+
+        </section>
+        <section class="section sectionFaq">
+
+        </section>
     </main>
     <footer class="mainFooter"></footer>
 </body>

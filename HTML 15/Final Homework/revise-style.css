@@ -1,14 +1,16 @@
-/* 手機版面() */
-.mainHeader{
-    height: 100vh;
-    padding: 90% 0% 0%;
-    box-sizing: border-box;
+/* 設定視窗寬高及比例 */
+:root{
+    --heightToWidthRatio: 177.86vw;
 }
+/* 手機版面() */
+
+/* 設定100vh讓首頁在不同長度的手機都滿版，同時設定min-heigh避免高度過短跑版 */
 .mainNav{
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     height: 100vh;
+    min-height: var(--heightToWidthRatio);
     position: absolute;
     top: 0;
     left: 0;
@@ -40,6 +42,8 @@
 .menuButton span{
     opacity: 0;
 }
+
+
 /* 手機版面變化範圍不至於太影響到menuButton線條，所以固定大小 */
 .menuButton::after{
     content: '';
@@ -64,6 +68,8 @@
     background-color: #fff;
     box-shadow: 0px 14px 0px #fff;
 }
+
+
 /* 若父層有設定z-index，則沿用父層的z-index，使得自身設定的變成在同層相比，實例情況下若設定z-index讓下方h1高於父層，則h1一定蓋到fix的版面，若不指定層級則不會有這個現象 */
 .navMenu{
     position: fixed;
@@ -120,10 +126,14 @@
     padding-top: 0.5em;
     font-weight: 600;
 }
+
+
 /* 用inline-block處理區塊超連結橫排，用margin無法完美填滿整個區塊(微調還是有空白)，用font-size:0，會影響後面使用相對單位(em)，所以改用flex處理。 */
 .RecruitBlock{
     display: flex;
 }
+
+
 /* 位於menu層的因為父層用fix撐開滿版，所以直接設定width: 50%有作用 */
 .RecruitBlock a{
     box-sizing: border-box;
@@ -146,6 +156,8 @@
     width: 38.7%;
     margin: 2px auto;
 }
+
+
 /* 位於nav層的並未指定寬度，所以在調整解析度時不會滿版(寬度由內容撐開)，要設定寬度 */
 .navRecruitBlock{
     width: 100%;
@@ -153,11 +165,19 @@
 
 /* ---------------------------------- */
 
+/* 設定100vh讓首頁在不同長度的手機都滿版，同時設定min-heigh避免高度過短跑版 */
+.mainHeader{
+    height: 100vh;
+    min-height: var(--heightToWidthRatio);
+    padding: 90% 0% 0%;
+    box-sizing: border-box;
+}
 
 /* 設定絕對定位，將圖片抽離原本層級，並設定z-index，避免覆蓋到前方的nav*/
 .headerBackground{
     width: 100%;
     height: 100vh;
+    min-height: var(--heightToWidthRatio);
     position: absolute;
     top: 0;
     left: 0;
@@ -165,7 +185,7 @@
     overflow: hidden;
 }
 .headerBackground img{
-    width: 100%;
+    object-fit: cover;
 }
 /* 設定相對定位，將文字抽離原本層級，使這個原始碼於後方的物件會蓋在前方的nav上*/
 .mainTitle{

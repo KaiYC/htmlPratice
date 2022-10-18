@@ -12,12 +12,25 @@
     function detectWindowSize(){
         let windowsWidth = window.innerWidth
         let windowsHeight = window.innerHeight
-        let windowsRatio = (windowsHeight / windowsWidth)*100
-        console.log('視窗寬度: '+windowsWidth+' 視窗高度: '+windowsHeight)
-        console.log('視窗比例: '+windowsRatio)
-        document.documentElement.style.setProperty('--heightToWidthRatio', `${windowsRatio}vw`)
+        console.log(`目前視窗寬度: ${windowsWidth}，目前視窗高度: ${windowsHeight}`)
+        if (windowsWidth < 768){
+            let titleContentHeight = windowsWidth*(0.6085+0.1994)
+            let minMainHeaderHeight = titleContentHeight + (windowsWidth*0.9)
+            if (windowsHeight < minMainHeaderHeight){
+                document.documentElement.style.setProperty('--minMainHeaderHeight',`${minMainHeaderHeight}px`)
+                console.log(`視窗高度小於內容，調整最小高度為: ${minMainHeaderHeight}`)
+            }else{
+                document.documentElement.style.setProperty('--minMainHeaderHeight',`100vh`)
+                console.log(`視窗高度大於內容，調整最小高度為: 100vh`)
+            }
+        }
+        else if (windowsWidth < 1024){
+
+        }else{
+
+        }
     }
-    window.onload = detectWindowSize
+    window.onresize = detectWindowSize
 </script>
 <body>
     <nav class="mainNav">

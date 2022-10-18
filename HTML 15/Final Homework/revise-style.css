@@ -1,8 +1,11 @@
 /* 設定視窗寬高及比例 */
 :root{
-    --heightToWidthRatio: 177.86vw;
+    --minMainHeaderHeight: 100vh;
 }
 /* 手機版面() */
+body{
+    font-size: 4.27vw;
+}
 
 /* 設定100vh讓首頁在不同長度的手機都滿版，同時設定min-heigh避免高度過短跑版 */
 .mainNav{
@@ -10,7 +13,7 @@
     flex-wrap: wrap;
     align-content: space-between;
     height: 100vh;
-    min-height: var(--heightToWidthRatio);
+    min-height: var(--minMainHeaderHeight);
     position: absolute;
     top: 0;
     left: 0;
@@ -168,7 +171,7 @@
 /* 設定100vh讓首頁在不同長度的手機都滿版，同時設定min-heigh避免高度過短跑版 */
 .mainHeader{
     height: 100vh;
-    min-height: var(--heightToWidthRatio);
+    min-height: var(--minMainHeaderHeight);
     padding: 90% 0% 0%;
     box-sizing: border-box;
 }
@@ -177,7 +180,7 @@
 .headerBackground{
     width: 100%;
     height: 100vh;
-    min-height: var(--heightToWidthRatio);
+    min-height: var(--minMainHeaderHeight);
     position: absolute;
     top: 0;
     left: 0;
@@ -186,6 +189,8 @@
 }
 .headerBackground img{
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 /* 設定相對定位，將文字抽離原本層級，使這個原始碼於後方的物件會蓋在前方的nav上*/
 .mainTitle{

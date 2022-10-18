@@ -236,11 +236,11 @@ body{
     position: sticky;
     top: 0px;
     left: 0px;
+    border: solid rgba(238, 238, 238, 0.5);
+    border-width: 0px 1px 0px 1px;
 }
 .titleBlock{
     padding: 21.33% 4.27% 72%;
-    border: solid rgba(238, 238, 238, 0.5);
-    border-width: 0px 1px 0px 1px;
 }
 .titleBlock h2{
     display: flex;

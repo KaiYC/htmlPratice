@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002-互動版面</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<style>
+    .interactionBlock{
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        font-size: min(1.111111111111111vw,16px);
+    }
+    .interactionItems{
+        position: relative;
+        width: 25%;
+    }
+    .interactionItems img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .interactionText{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0% 5%;
+        background-color: rgba(0, 0, 0, .6);
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .interactionItems:hover .interactionText{
+        opacity: 1;
+    }
+    .interactionText h2{
+        color: #ffa;
+        font-size: 1.35em;
+        line-height: 1.3em;
+        font-weight: 500;
+    }
+    .interactionText h2::after{
+        content: '';
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: #ffa;
+        margin: .5em 0;
+        transition: width .3s .3s;
+    }
+    .interactionItems:hover .interactionText h2::after{
+        width: 100%;
+    }
+    .interactionText p{
+        color: #fff;
+        font-size: 1.1em;
+        line-height: 1.2em;
+    }
+</style>
+<body>
+    <section class="interactionBlock">
+        <div class="interactionItems">
+            <img src="https://picsum.photos/500/400?random=10" alt="">
+            <div class="interactionText">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloremque consequuntur molestias eos asperiores. Vel veritatis provident fugit aliquid minus.</p>
+            </div>
+        </div>
+        <div class="interactionItems">
+            <img src="https://picsum.photos/500/400?random=20" alt="">
+            <div class="interactionText">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloremque consequuntur molestias eos asperiores. Vel veritatis provident fugit aliquid minus.</p>
+            </div>
+        </div>
+        <div class="interactionItems">
+            <img src="https://picsum.photos/500/400?random=30" alt="">
+            <div class="interactionText">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloremque consequuntur molestias eos asperiores. Vel veritatis provident fugit aliquid minus.</p>
+            </div>
+        </div>
+        <div class="interactionItems">
+            <img src="https://picsum.photos/500/400?random=40" alt="">
+            <div class="interactionText">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloremque consequuntur molestias eos asperiores. Vel veritatis provident fugit aliquid minus.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

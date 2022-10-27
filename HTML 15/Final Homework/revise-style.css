@@ -106,7 +106,6 @@ body{
     display: flex;
     align-items: center;
     width: 74.67%;
-    /* margin要扣掉圖片白邊，才能對齊 */
     margin-left: 4%;
 }
 .menuLogo img{
@@ -339,7 +338,6 @@ body{
     padding: 6.69% 0% 0% 4.46%;
     text-decoration: none;
     color: #fff;
-
 }
 .departmentTitle{
     flex-grow: 1;
@@ -364,4 +362,24 @@ body{
     top: 0%;
     left: 0%;
     z-index: -1;
+}
+
+/* ------------------------------------------------------------------------- */
+.sectionOurStaff{
+    position: relative;
+}
+.sectionOurStaff .titleBlock{
+    padding: 21.33% 0% 0% 0%;
+}
+.staffInfoBlock{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;    
+}
+.staffPhotoSwiper{
+    display: flex;
+    overflow: hidden;
+}
+.photoWall{
+    
 }

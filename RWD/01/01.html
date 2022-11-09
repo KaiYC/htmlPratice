@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Day 1</title>
+</head>
+    <style>
+        body {
+            --gap: 10px;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+            margin-bottom: 20px;
+        }
+        /* 平直 平衡 桌 */
+        @media screen and (min-width: 768px){
+            .box{
+                background-color: #fa0;
+            }
+        }
+        /* 平橫 桌  */
+       @media screen and (min-width: 1024px) {
+        .box{
+            background-color: #af0;
+        }
+       }
+        /*桌 */
+        @media screen and (min-width: 1200px){
+            .box{
+                background-color: #faa;
+            }
+            
+        }
+        .container{
+            margin: auto;
+        }
+        .item{
+            background-color: #fa0;
+            margin: 0 var(--gap) var(--gap);
+        }
+        
+        /* 2 column */
+        @media screen and (min-width:768px){
+            .container{
+                width: 720px;
+                display:flex;
+                flex-wrap: wrap;
+            }
+            .item{
+                width: calc(100% / 2 - var(--gap) * 2);
+            }
+        }
+
+        /* 3 column */
+        @media screen and (min-width:1024px){
+            .item{
+                width: calc(100% / 3 - var(--gap) * 2);
+            }
+        }
+
+        /* 6 column */
+        @media screen and (min-width:1200px){
+            .item{
+                width: calc(100% / 6 - var(--gap) * 2);
+            }
+        }
+    </style>
+<body>
+   <div class="box"></div> 
+
+   <div class="container">
+         <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem error quo tempore quaerat sit! Quidem aperiam esse sed totam. Inventore aliquid quod error fuga voluptate quas, enim eius cum asperiores a molestias nemo obcaecati, repellat unde quo doloribus qui! Labore, sapiente porro quia sed explicabo delectus ipsa error magni culpa.</div>
+         <div class="item">Placeat distinctio, fugit cumque magnam repellat ab ad soluta repudiandae ea nesciunt, excepturi delectus, nostrum cum. Nemo voluptas sapiente atque ipsum nam facilis maiores perferendis optio nostrum, incidunt hic commodi quasi enim veniam repellendus voluptatum suscipit eum accusantium numquam vel voluptate cum harum! Harum impedit ad accusantium quis velit laborum!</div>
+        <div class="item">Mollitia, aliquid architecto iusto tempore quaerat corrupti ipsa non assumenda adipisci doloribus fugiat dolorem at cumque delectus obcaecati optio facilis deserunt eligendi asperiores, eaque inventore labore eveniet nobis! Sint vel dolores nulla minima vero dolorum vitae corporis minus. Veniam dolorum magni consequatur nemo veritatis suscipit nostrum enim harum quod culpa.</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ea provident nostrum cum porro magnam minus commodi facilis facere a rem est atque, ullam voluptatum tempora at molestias, modi voluptatibus veniam ab accusantium possimus. Error et voluptatem officiis, sequi dicta similique est culpa, accusamus eum veniam quis dignissimos laudantium incidunt!</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatem nisi voluptate iusto aperiam doloremque reiciendis harum totam qui nesciunt, minima eaque culpa omnis molestiae blanditiis vero ab reprehenderit minus fugit placeat. Perferendis reprehenderit voluptas, nam provident mollitia, adipisci quaerat aspernatur dolor debitis voluptatibus aliquid nostrum ea asperiores, veniam exercitationem.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam fugiat pariatur eos illo quis dolor debitis, dicta assumenda, fugit labore consectetur repellendus ipsa quaerat nisi? Est voluptas minima consequatur dolorem, nihil blanditiis quis aspernatur voluptatibus qui ex, rem id quisquam, reiciendis voluptates nulla ad earum! Soluta dolor dolore vel?</div>
+   </div>
+   
+</body>
+</html>

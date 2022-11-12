@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-system</title>
+</head>
+<style>
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 33.333333%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .item {
+        background-color: #fa0;
+    }
+    /*  */
+    .container {
+        width: 1440px;
+        margin: auto;
+    }
+    /* 分欄容器 */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* margin百分比 參照是父層的寬度 */
+    [class*="col-"]{
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .col-1{width: 8.333%;}
+    .col-2{width: 16.666%;}
+    .col-3{width: 25%;}
+    .col-4{width: 33.333%;}
+    .col-5{width: 41.666%;}
+    .col-6{width: 50%;}
+    .col-7{width: 58.333%;}
+    .col-8{width: 66.666%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.333%;}
+    .col-11{width: 91.666%;}
+    .col-12{width: 100%;}
+    @media screen and (min-width: 765px){
+        .col-md-1{width: 8.333%;}
+        .col-md-2{width: 16.666%;}
+        .col-md-3{width: 25%;}
+        .col-md-4{width: 33.333%;}
+        .col-md-5{width: 41.666%;}
+        .col-md-6{width: 50%;}
+        .col-md-7{width: 58.333%;}
+        .col-md-8{width: 66.666%;}
+        .col-md-9{width: 75%;}
+        .col-md-10{width: 83.333%;}
+        .col-md-11{width: 91.666%;}
+        .col-md-12{width: 100%;}
+    }
+    @media screen and (min-width: 1024px){
+        .col-lg-1{width: 8.333%;}
+        .col-lg-2{width: 16.666%;}
+        .col-lg-3{width: 25%;}
+        .col-lg-4{width: 33.333%;}
+        .col-lg-5{width: 41.666%;}
+        .col-lg-6{width: 50%;}
+        .col-lg-7{width: 58.333%;}
+        .col-lg-8{width: 66.666%;}
+        .col-lg-9{width: 75%;}
+        .col-lg-10{width: 83.333%;}
+        .col-lg-11{width: 91.666%;}
+        .col-lg-12{width: 100%;}
+    }
+    @media screen and (min-width: 1200px){
+        .col-xl-1{width: 8.333%;}
+        .col-xl-2{width: 16.666%;}
+        .col-xl-3{width: 25%;}
+        .col-xl-4{width: 33.333%;}
+        .col-xl-5{width: 41.666%;}
+        .col-xl-6{width: 50%;}
+        .col-xl-7{width: 58.333%;}
+        .col-xl-8{width: 66.666%;}
+        .col-xl-9{width: 75%;}
+        .col-xl-10{width: 83.333%;}
+        .col-xl-11{width: 91.666%;}
+        .col-xl-12{width: 100%;}
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="item">Lipsum dolor, sit amet consectetur adipisicing elit. A perspiciatis sint itaque maiores ipsam consectetur nobis ducimus dolorem earum, corrupti iste ea aspernatur voluptates nam. Mollitia similique ex fugiat dolorum, consequatur quas quaerat quis! Dolor quis minus vel laborum numquam? Dolorem aliquid optio praesentium quae. Exercitationem fuga consequuntur laboriosam repudiandae.</div>
+            </div>
+            <div class="col">
+                <div class="item">Nam officiis, ipsum nesciunt vero dolorum, quo voluptatum adipisci magnam repellendus illum omnis corporis odit similique consequatur architecto rerum quibusdam? Earum pariatur inventore iste numquam vel autem reiciendis assumenda consequatur corporis facere praesentium, ducimus at repudiandae iure tempora aliquam quidem ad. Nesciunt possimus corporis consectetur suscipit provident fugiat veritatis animi?</div>
+            </div>
+            <div class="col">
+                <div class="item">Ut dolor totam molestias. Perferendis, ab adipisci amet deserunt repellat doloremque sequi ducimus illum sapiente quaerat alias corrupti eveniet optio! Eum reiciendis dolor voluptate assumenda repellendus velit, tenetur quasi, similique, mollitia debitis vero fugiat error quaerat magnam corrupti explicabo minus praesentium est eius at ad. Odit enim minima numquam vero.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

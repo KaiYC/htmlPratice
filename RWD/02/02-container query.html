@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .warp{
+        background-color: #ccc;
+        /* 定義要查詢的項目是水平方向的尺寸 */
+        container-type: inline-size;
+        container-name: ooxx;
+    }
+
+    .item{
+        border: 1px solid red;
+    }
+
+    .item img{
+        width: 100%;
+    }
+
+    .item .txt {
+        padding: 10px;
+    }
+
+    @container ooxx (min-width: 600px) {
+        .item {
+            display: flex;
+        }
+        .item .pic,
+        .item .txt {
+            width: 300px;
+            flex-grow: 1;
+        }
+    }
+</style>
+<body>
+    <!--container query 由被查詢的物件來決定CSS的樣式  -->
+    <div class="warp">
+        <div class="item">
+            <div class="pic">
+                <img src="https://fakeimg.pl/300x200/200">
+            </div>
+            <div class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus placeat minus sequi unde quia consequatur dicta accusantium beatae fuga quisquam, ducimus necessitatibus culpa perspiciatis tenetur velit rem doloremque totam assumenda.</div>
+        </div>
+    </div>
+</body>
+</html>

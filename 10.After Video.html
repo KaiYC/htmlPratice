@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>癌症研究計畫111年度成果發表暨國際研討會影片</title>
+</head>
+<style>
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        /* background-color: #ccc; */
+        background-image: linear-gradient(180deg, rgba(29,47,94,1) 0%, rgba(41,91,137,1) 30%, rgba(32,114,153,1) 60%, rgba(38,93,108,1) 100%);;
+    }
+    .sessionContent{
+        padding: 10px;
+    }
+    .presession,
+    .closingRemark,
+    .session{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sessionTitle{
+        width: fit-content;
+        margin: auto;
+        padding-left: 10px;
+        font-size: 1.1em;
+        font-weight: 700;
+        line-height: 2ex;
+        color: #fff;
+    }
+    .informationBlock{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .informationBlock:hover .informationText{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset,  rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    .informationBlock:hover{
+        transform: translate(1px, 1px);
+    }
+    .videoContainer{
+        position: relative;
+        border-radius: 5px 5px 0px 0px;
+        overflow: hidden;
+    }
+    .videoContainer a{
+        display: block;
+        text-decoration: none;
+        width: 100%;
+    }
+    .videoContainer a::before,
+    .videoContainer a::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 1.77%;
+        right: 1.77%;
+        width: 18%;
+        aspect-ratio: 258 / 180;
+        
+    }
+    .videoContainer a::before{
+        background-color: #f00;
+        border-radius: 5px;
+    }
+    .videoContainer a::after{
+        clip-path: polygon(41.08% 27.77%, 67.05% 50%, 41.08% 72.22%);
+        background-color: #fff;
+    }
+    .videoContainer a img{
+        width: 100%;
+        vertical-align: bottom;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+    .informationText{
+        background-color: #fff;
+        border-radius: 0px 0px 5px 5px;
+        overflow: hidden;
+        padding: 5px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .speakTitle{
+        font-size: 1.1em;
+        font-weight: 600;
+        line-height: 2.5ex;
+        word-spacing: .2em;
+        padding: 10px 0px;
+    }
+    .speakerInfo{
+        padding: 3px 0px;
+        font-size: 1.1em;
+    }
+    .speakerInfo span{
+        display: block;
+    }
+    .position{
+        padding: 3px 0px;
+        font-size: 1.1em;
+    }
+    .banner img, .footer img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+    @media screen and (min-width: 768px) {
+        .informationBlock{
+            width: 50%;
+        }
+        .sessionTitle{
+            margin:0;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        .speakTitle{
+            flex-grow: 1;
+        }
+        .speakerInfo span{
+            display: inline;
+        }
+        .position span{
+            display: block;
+            height: 1.1em;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .informationBlock{
+            width: 33.333333%;
+        }
+    }
+    .videoContainer a[href='notAvailable']{
+        pointer-events:  none;
+    }
+    .videoContainer a[href='notAvailable']::before{
+        content: '因授權關係無法提供影片，請見諒。';
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        aspect-ratio: 373 / 280;
+        border-radius: 5px 5px 0px 0px;
+        background-color: #000;
+        opacity: .8;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
+        transition: .3s;
+
+    }
+    .videoContainer a[href='notAvailable']::after{
+        display: none;
+    }
+    .videoContainer:hover a[href='notAvailable']::before {
+        bottom: 0;
+    }
+</style>
+<script>
+    const program = {
+        'presession' : [
+            {
+                'link' : 'https://youtu.be/DGcszJoLRiE',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1uGQvp1BzwYpGim6RDAQHMiu8WMkgv4UA',
+                'content' : ['Opening Remarks','Dr. Pi-Sheng Wang','王必勝 政務次長','Ministry of Health and Welfare, Taiwan']
+            }
+        ],
+        'session1' : [
+            {
+                'link' : 'https://youtu.be/BYGGtLew-s4',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1h3UVJ-VfHLf41d4w8plxTX6RjKv9qadY',
+                'content' : ['Impact of the COVID-19 Pandemic on Cancer Care Delivery at the USC Norris Comprehensive Cancer Center in Los Angeles','Dr. Mariana C. Stern','','USC Norris Comprehensive Cancer Center, University of Southern California, U.S.A.']
+            },
+            {
+                'link' : 'https://youtu.be/7L4t-QZIctI',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1phPcJLW1cBDbAET72X5pqb_S0khVwzyi',
+                'content' : ['Cancer Treatment and Clinical Trials during the COVID-19 Pandemic','Dr. James Chih-Hsin Yang','楊志新 院長','National Taiwan University Cancer Center, Taiwan<span> </span>']
+            },
+            {
+                'link' : 'https://youtu.be/ZJfCol6NpU8',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1KDwaNrfMDDql1miVzHIqgyIau_xGD_5A',
+                'content' : ['Caring Cancer Patients during the COVID-19 Pandemic: Experiences of Taipei Veterans General Hospital','Dr. Muh-Hwa Yang','楊慕華 副校長','National Yang Ming Chiao Tung University, Taiwan']
+            },
+        ],
+        'session2':[
+            {
+                'link' : 'https://youtu.be/VAUYLQlpwDs',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1-XZ_C4fObya1gL1C8lCXvW6LzQBuCTDy',
+                'content' : ['The COVID-19 Pandemic and Cancer Care: Challenges in Screening, Diagnosis, and Management and Opportunities for Innovative Care Delivery','Dr. Wei J. Chen','陳為堅 主任','Center for Neuropsychiatric Research, National Health Research Institutes, Taiwan']
+            },
+            {
+                'link' : 'https://youtu.be/v4lQscGMghU',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1tHWKSa1WReEAQN5-FUkgS0holLfWlCny',
+                'content' : ['Impacts of COVID-19 Pandemic on Cancer Clinical Trials','Dr. Chia-Chi Lin','林家齊 教授','Graduate Institute of Clinical Medicine, National Taiwan University, Taiwan']
+            },
+            {
+                'link' : 'https://youtu.be/wkLpGzOzIAM',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1-HMosTpiV5AE57WJwpBZSb-MNLBbTzMV',
+                'content' : ['Precision Cancer Prevention in the Post-COVID-19 Pandemic Era','Dr. Hsiu-Hsi Chen','陳秀熙 教授','Institute of Epidemiology and Preventive Medicine, National Taiwan University, Taiwan']
+            },
+        ],
+        'session3':[
+            {
+                'link' : 'https://youtu.be/DtUDXjsYIFs',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1GqU4msFZEdHd6l6g1jzBhmp2wi9CGR5M',
+                'content' : ['Precision Therapy for Gastric Cancer','Dr. Kohei Shitara','','Department of Gastrointestinal Oncology, National Cancer Center Hospital East, Japan']
+            },
+            {
+                'link' : 'notAvailable',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1vq_-1Fi86QeRG_50hOXttM6zZN3TOs9D',
+                'content' : ['Precision Medicine in Biliary Tract Cancer','Dr. Li-Tzong Chen','陳立宗 特聘研究員','National Institute of Cancer Research, National Health Research Institutes, Taiwan']
+            },
+            {
+                'link' : 'https://youtu.be/Xbl_NWYeAIY',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1P7Ito1MJrv9vi20I4pVVKhrt2AnRyFkj',
+                'content' : ['Targeting the Ubiquitin Pathway in Cancer Therapy','Dr. Wenyi Wei','','Department of Pathology, Beth Israel Deaconess Medical Center, Harvard Medical School, U.S.A.']
+            },
+            {
+                'link' : 'https://youtu.be/8K8KGp-U-3Q',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1go7i4pASDcX4fk6B8vWfGBxQFsnAnKYp',
+                'content' : ['Development of Targeted Cancer Nanomedicines','Dr. Esther H. Chang','','Department of Oncology, Georgetown University Medical Center, U.S.A.']
+            },
+            {
+                'link' : 'https://youtu.be/dpYUjRkY_-0',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1tMSrUHLLU1at7FYQYcI6tNOuAwu6khau',
+                'content' : ['Marker-guided Effective Therapy (Mget)','Dr. Mien-Chie Hung','洪明奇 校長','China Medical University, Taiwan<span> </span>']
+            },
+        ],
+        'session4':[
+            {
+                'link' : 'https://youtu.be/CGFk7MOwbzE',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1R5AsapiSgRnh92Pv4hcV7_NqLs2nT7uN',
+                'content' : ['Taiwan Can Help: Successful Implementation of Screening and Eradication Program in Taiwan for Prevention of Gastric Cancer','Dr. Ming-Shiang Wu','吳明賢 院長','National Taiwan University Hospital, Taiwan<span> </span>']
+            },
+            {
+                'link' : 'https://youtu.be/QfJAk9J-oIo',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1rr372qT46xRB9MjLtgOchmjIzoQWYYPr',
+                'content' : ['Impact of Population Demographic Change and Future Cancer Disease Burden in Taiwan','Dr. Li-Sheng Chen','陳立昇副院長','College of Oral Medicine, Taipei Medical University, Taiwan']
+            },
+            {
+                'link' : 'https://youtu.be/l7ls1VYthO0',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=13-g0aui-eyn-9LEq-KqoMx6QiIhT2I_a',
+                'content' : ['Young-onset Colorectal Cancer: A Global Emerging Issue','Dr. Han-Mo Chiu','邱瀚模 主任','Health Management Center, National Taiwan University Hospital, Taiwan']
+            },
+        ],
+        'closingRemark':[
+            {
+                'link' : 'https://youtu.be/LOiJ1WWeaOQ',
+                'thumbnail' : 'https://drive.google.com/uc?export=view&id=1wFIleptRR-3ITv0vxVc4puQrdXfv6pzC',
+                'content' : ['Closing Remarks','Dr. Yung-Chi Cheng','鄭永齊 院士','Department of Pharmacology, Yale University School of Medicine, U.S.A.']
+            }
+        ]
+    }
+    function cardFormatGenerate(info){
+        let card = `
+                        <div class="informationBlock">
+                                <div class="videoContainer">
+                                    <a href="${info.link}" target="_blank">
+                                        <img src="${info.thumbnail}" alt="${info.content[0]}">
+                                    </a>
+                                </div>
+                                <div class="informationText">
+                                    <div class="speakTitle">${info.content[0]}</div>
+                                    <div class="speakerInfo"><strong>${info.content[1]}&nbsp;&nbsp;</strong> <span>${info.content[2]}</span></div>
+                                    <div class='position'>${info.content[3]}</div>
+                                </div>
+                        </div>
+                    `
+        // console.log(card)
+        return card
+    }
+    function programGeneration(){
+        let content = ""
+        //presession
+        content += `
+                    <div class='presession'>
+                   `
+            for (let i=0; i<program.presession.length; i++){
+                let info = program.presession[i]
+                let card = cardFormatGenerate(info)
+                content += card
+            }
+        content +=`</div>`
+        //session 1
+        content +=`
+                    <div class='sessionTitle'>Session 1: Impacts of COVID-19 Pandemic on Cancer Care</div>
+                    <div class='session session1'>
+                  `
+                for (let i=0; i<program.session1.length; i++){
+                    let info = program.session1[i]
+                    let card = cardFormatGenerate(info)
+                    content += card
+                }
+        content += `</div>`
+        //session 2
+        content +=`
+                    <div class='sessionTitle'>Session 2: Impacts of COVID-19 Pandemic on Cancer Research and Clinical Trials</div>
+                    <div class='session session2'>
+                  `
+                for (let i=0; i<program.session2.length; i++){
+                    let info = program.session2[i]
+                    let card = cardFormatGenerate(info)
+                    content += card
+                }
+         content += `</div>`
+         //session 3
+         content +=`
+                    <div class='sessionTitle'>Session 3: Novel Therapy in Cancer Treatment</div>
+                    <div class='session session3'>
+                  `
+                for (let i=0; i<program.session3.length; i++){
+                    let info = program.session3[i]
+                    let card = cardFormatGenerate(info)
+                    content += card
+                }
+         content += `</div>`
+         //session 4
+         content +=`
+                    <div class='sessionTitle'>Session 4: Challenges and Policy Implications for Cancer Control in Taiwan</div>
+                    <div class='session session4'>
+                  `
+                for (let i=0; i<program.session4.length; i++){
+                    let info = program.session4[i]
+                    let card = cardFormatGenerate(info)
+                    content += card
+                }
+         content += `</div>`
+        //closingRemark
+        content +=`
+                    <div class='closingRemark'>
+                  `
+                for (let i=0; i<program.closingRemark.length; i++){
+                    let info = program.closingRemark[i]
+                    let card = cardFormatGenerate(info)
+                    content += card
+                }
+         content += `</div>`
+        // console.log(content)
+        document.getElementById('sessionContent').innerHTML = content
+    }
+    window.onload = programGeneration
+
+</script>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="https://drive.google.com/uc?export=view&id=1n7j2kNxbNNUuoMB-wuizsRCUr_Op0P0E" alt="癌症研究計畫111年度成果發表暨國際研討會主視覺">
+        </div>
+        <div class="sessionContent" id="sessionContent">
+        </div>
+        <div class="footer">
+            <img src="https://drive.google.com/uc?export=view&id=1HyWDvZpEJ0pr7A5fpXkLo7zwVa2Pr6ph" alt="癌症研究計畫111年度成果發表暨國際研討會合照">
+        </div>
+    </div>
+</body>
+</html>
